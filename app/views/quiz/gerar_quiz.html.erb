@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>Quiz#index</h1>
+<h2>Aula 1</h2>
+<h2>video</h2>
+<% @video_code = "XwmtNk_Yb2Q" %>
+<iframe width="560" height="349" src="<%= "http://www.youtube.com/embed/"+@video_code %>"></iframe>
+
+<h1>Quiz</h1>
+
+<p>Questões:</p>
+<form id ="formulario" method="get">
+<ul>
+	<% @questions.each do |question| %>
+			<%= question.statement %>
+			<% @alternativas = [question.a, question.b, question.c, question.d] %>
+			<% @alternativas.shuffle! %>
+			<br>
+			<label class="radio">
+
+				<input type="radio" name=<%= question.statement %> value="a"><%= @alternativas[0] %>
+			</label>
+			<label class="radio">
+				<input type="radio" name=<%= question.statement %> value="b"><%= @alternativas[1] %>
+			</label>
+			<label class="radio">
+				<input type="radio" name=<%= question.statement %> value="c"><%= @alternativas[2] %>
+			</label>
+			<label class="radio">
+				<input type="radio" name=<%= question.statement %> value="d"><%= @alternativas[3] %>
+			</label>
+			<br>
+	<% end %>	
+</ul>
+</form>
+
+<%= yield %>
+
+</body>
+</html>

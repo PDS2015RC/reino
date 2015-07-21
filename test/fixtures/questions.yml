@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson: MyString
+  statement: MyText
+  a: MyString
+  b: MyString
+  c: MyString
+  d: MyString
+
+two:
+  lesson: MyString
+  statement: MyText
+  a: MyString
+  b: MyString
+  c: MyString
+  d: MyString
