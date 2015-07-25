@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'main/index'
 
   get 'quiz/index'
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   get 'quiz/gerar_quiz'
 
   get 'quiz/catalog'
+
+  devise_for :users, controllers: {registrations: "registrations"}
 
   resources :questions
   # The priority is based upon order of creation: first created -> highest priority.
