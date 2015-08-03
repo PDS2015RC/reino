@@ -28,11 +28,7 @@ module Reino
         :domain      => 'mail.google.com',
         :port        => 587,
         :user_name   =>"reinodocodigo@gmail.com",
-<<<<<<< HEAD
-       
-=======
-        :password    => "Reinotads20141",
->>>>>>> parent of 8e2010d... Senha do email
++       :password    => "Senha Aqui",
         :authentication => 'login',
         :enable_starttls_auto => true
 
