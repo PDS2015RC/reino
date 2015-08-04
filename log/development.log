@@ -138,3 +138,363 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/sessions/new.html.erb within layouts/application (47.3ms)
   Rendered layouts/_navbar.html.erb (0.3ms)
 Completed 200 OK in 4956ms (Views: 4943.6ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCharacters (20150803143038)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "img" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_characters_on_User_id" ON "characters" ("User_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150803143038"]]
+  [1m[36m (154.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-04 13:53:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 13:53:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (103.8ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 621ms (Views: 546.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-04 13:53:26 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zci9rPZNStRjeITDSGXPkIxh7BHHx9Oeo7V8Qp4fytymMVzcLCfXbebnykbwtoduhBRGw1RdZt5Ur0TiG3+5EA==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+Completed 401 Unauthorized in 202ms (ActiveRecord: 0.2ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zci9rPZNStRjeITDSGXPkIxh7BHHx9Oeo7V8Qp4fytymMVzcLCfXbebnykbwtoduhBRGw1RdZt5Ur0TiG3+5EA==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 181ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-04 13:53:35 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3bj1VpTHLKKm55X4x+xmJShLZshRrrTdMKKZ1H6KwxgjwKlgDmBCw8E0NJbzPlmnNSHSbLcD5OD2LLH1JpYwA==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "kerarchie@yahoo.com.ar"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3bj1VpTHLKKm55X4x+xmJShLZshRrrTdMKKZ1H6KwxgjwKlgDmBCw8E0NJbzPlmnNSHSbLcD5OD2LLH1JpYwA==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 157ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2015-08-04 13:53:47 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2015-08-04 13:53:52 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EI5t+ZzTE4DolxEvHucR2ZUkod4yDQUVS6IHJHoc9uXTd4yJRrmOOW0IX6qmNFknnVELDKGXsFW8uD+E/3yFKQ==", "user"=>{"email"=>"kerarchie@yahoo.com.ar"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 215ms (Views: 77.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-08-04 13:54:00 -0300
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-04 13:54:18 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MetWTACdmXsj4yHek7ujwukH3Xtr0dCMkqiarL686nXyErc82vcEwqZ8b1sraOs84XJ3qfhLZcxlsqIMO9yZuQ==", "user"=>{"name"=>"julian", "email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kerarchie@yahoo.com.ar' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "92992744540a1e4a376898bab2d50e86a8b82e89fa9aefd03316bdc3721b52a0"]]
+  [1m[35mSQL (32.6ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "julian"], ["email", "kerarchie@yahoo.com.ar"], ["encrypted_password", "$2a$10$L5C/vOWRJV3ZGKl7jNDOA.PJShK6bC3IssmaGMvqgsHYmNkQ3VCjG"], ["created_at", "2015-08-04 16:54:19.123955"], ["updated_at", "2015-08-04 16:54:19.123955"], ["confirmation_token", "92992744540a1e4a376898bab2d50e86a8b82e89fa9aefd03316bdc3721b52a0"], ["confirmation_sent_at", "2015-08-04 16:54:19.329515"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.8ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 199.7ms
+
+Sent mail to kerarchie@yahoo.com.ar (4460.4ms)
+Date: Tue, 04 Aug 2015 13:54:19 -0300
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: kerarchie@yahoo.com.ar
+Message-ID: <55c0ee3b93672_e691617c80606f2@jbull-X450LD.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome kerarchie@yahoo.com.ar!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=_wV6Q2rXbTFhvNvPY5Fh">Confirm my account</a></p>
+
+  [1m[36m (179.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5717ms (ActiveRecord: 212.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-04 13:54:24 -0300
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 13:54:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLessons (20150804170500)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "lessons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "subject" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150804170500"]]
+  [1m[36m (138.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:05:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 449ms (Views: 425.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-04 14:05:21 -0300
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-04 14:05:23 -0300
+Processing by QuizController#catalog as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:05:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:07:57 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Za1hqluxQyVpbfmIwdaUaFhJpe76ES0dVOKNgFGpn6emVIDagdvenOzytw15BdyWUDwPPGmLmF2j+LUg1Mnsaw==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 401 Unauthorized in 154ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:07:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 75ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:08:07 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hA1iykmoTFDShcQQ8qhvJyolf+YJcVfqwPgxp6mmj7dH9IO6k8LR6VcaipVKeyfZIlDVNJrr4qo34gkHLMb8ew==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Completed 401 Unauthorized in 103ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:08:07 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-08-04 14:08:41 -0300
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-04 14:08:56 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OH9kK1A0KdBzuE1Uhw02zQn380HA7cE7ZJspsXyDxRH7hoVbil60afYnA9E/3n4zAYJZk1N3dHuTgRER+eO23Q==", "user"=>{"name"=>"julian", "email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kerarchie@yahoo.com.ar' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 77.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2015-08-04 14:09:05 -0300
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2015-08-04 14:09:17 -0300
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DyHOTnxeQXcAnu0RBwKou7pY+WFhRJ0jzCnZy4x75q/M2C8+pjTczoUBo5S/0eBFsi1Ts/LeKGM7M+FrCRuVYw==", "user"=>{"email"=>"kerarchie@yahoo.com.ar"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."unconfirmed_email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["unconfirmed_email", "kerarchie@yahoo.com.ar"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "74d081cb01804c111d6791c534459c2a614a22d28a96f1f666f4a73b6f60fc41"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "confirmation_token" = ?, "confirmation_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmation_token", "74d081cb01804c111d6791c534459c2a614a22d28a96f1f666f4a73b6f60fc41"], ["confirmation_sent_at", "2015-08-04 17:09:17.277944"], ["updated_at", "2015-08-04 17:09:17.278574"], ["id", 1]]
+  [1m[35m (139.6ms)[0m  commit transaction
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 201.4ms
+
+Sent mail to kerarchie@yahoo.com.ar (4148.5ms)
+Date: Tue, 04 Aug 2015 14:09:17 -0300
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: kerarchie@yahoo.com.ar
+Message-ID: <55c0f1bd9b7ed_f813f88983495d09981@jbull-X450LD.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome kerarchie@yahoo.com.ar!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ZTKNZZ5A9zZ56QY_WKUF">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 4747ms (ActiveRecord: 140.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:09:21 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2015-08-04 14:09:46 -0300
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2015-08-04 14:09:50 -0300
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NBiWAerFJEWftRKPa6YN2PGTa0i2tHowA+of3l1kzsn34XdxMK+5/BoqXArTdUUm+ebBmiUuz3D08Cd+2AS9BQ==", "user"=>{"email"=>"kerarchie@yahoo.com.ar"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."unconfirmed_email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["unconfirmed_email", "kerarchie@yahoo.com.ar"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "fac3978feb77d84f5a50ea9076e6b29549a98b70a83f5df828f65292b59c53c1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "confirmation_token" = ?, "confirmation_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmation_token", "fac3978feb77d84f5a50ea9076e6b29549a98b70a83f5df828f65292b59c53c1"], ["confirmation_sent_at", "2015-08-04 17:09:50.497908"], ["updated_at", "2015-08-04 17:09:50.498515"], ["id", 1]]
+  [1m[35m (187.8ms)[0m  commit transaction
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.3ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 5.6ms
+
+Sent mail to kerarchie@yahoo.com.ar (3453.2ms)
+Date: Tue, 04 Aug 2015 14:09:50 -0300
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: kerarchie@yahoo.com.ar
+Message-ID: <55c0f1dea9e08_f813f88983495d010049@jbull-X450LD.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome kerarchie@yahoo.com.ar!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=WqhVs7PxU_5zYFGsM6Cx">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3657ms (ActiveRecord: 188.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-04 14:09:54 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)

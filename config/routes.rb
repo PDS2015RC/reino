@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :lessons
   get 'main/index'
 
   get 'quiz/index'
