@@ -9,10 +9,9 @@
 <body>
 
 <h1>Quiz#index</h1>
-<h2>Aula 1</h2>
+<h2>Aula <%= @lesson.subject%></h2>
 <h2>video</h2>
-<% @video_code = "Ds1n6aHchRU" %>
-<iframe width="560" height="349" src="<%= "http://www.youtube.com/embed/"+@video_code %>"></iframe>
+<iframe width="560" height="349" src="<%= "http://www.youtube.com/embed/"+@video %>"></iframe>
 
 <h1>Quiz</h1>
 

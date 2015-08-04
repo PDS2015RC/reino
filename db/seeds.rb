@@ -13,3 +13,6 @@ Question.create(lesson: 'loops', statement: 'while em portugues significa:', a: 
 Question.create(lesson: 'loops', statement: 'qual dos nomes a seguir não representa um laço', a: 'if', b: 'while', c: 'for', d: 'foreach')
 Question.create(lesson: 'loops', statement: 'x = 3+2. se x>5 escreva java senao escreva rails', a: 'rails', b: 'java', c: 'phyton', d: 'javascript')
 Question.create(lesson: 'loops', statement: 'encontre x', a: 'x', b: 'y', c: 'w', d: 'z')
+Question.create(lesson: 'condicional_if', statement: 'considere x=10, if(x+2 < 15): print "lol", else: print "dota"', a: 'lol', b: '10', c: 'dota', d: '12')
+Lesson.create(url: 'DWkyl-1rkW4', subject: 'loops')
+Lesson.create(url: '45HA6h_FTBg', subject: 'condicional_if')
