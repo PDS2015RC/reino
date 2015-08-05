@@ -12897,3 +12897,2513 @@ Migrating to AddImgSrcToCharacters (20150805204345)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 17:58:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `click' for #<#<Class:0x00000004dac038>:0x00000004da6e30>):
+    12:     </script>
+    13:     <div id="hair">
+    14:     <p>Cabelo: 
+    15:     <button onclick=<%= click%>"change_hair('hair')">Default</button>
+    16:     <button onclick="change_hair('hair_black')">Black</button> 
+    17:     <button onclick="change_hair('hair_blue')">Blue</button>
+    18:     <button onclick="change_hair('hair_brown')">Brown</button>
+  app/views/character_generator/create.html.erb:15:in `_app_views_character_generator_create_html_erb__864616909330787477_40531480'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (24.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (51.3ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 458ms (Views: 456.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 17:59:01 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:00:18 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `click' for #<#<Class:0x00000004dac038>:0x007f207805b1b8>):
+    12:     </script>
+    13:     <div id="hair">
+    14:     <p>Cabelo: 
+    15:     <button onclick=<"change_hair('hair');<%= click %>;">Default</button>
+    16:     <button onclick="change_hair('hair_black')">Black</button> 
+    17:     <button onclick="change_hair('hair_blue')">Blue</button>
+    18:     <button onclick="change_hair('hair_brown')">Brown</button>
+  app/views/character_generator/create.html.erb:15:in `_app_views_character_generator_create_html_erb__864616909330787477_69888714657740'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (48.3ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:00:23 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `click' for #<#<Class:0x00000004dac038>:0x007f2078c511c0>):
+    12:     </script>
+    13:     <div id="hair">
+    14:     <p>Cabelo: 
+    15:     <button onclick=<"change_hair('hair');<%= click %>">Default</button>
+    16:     <button onclick="change_hair('hair_black')">Black</button> 
+    17:     <button onclick="change_hair('hair_blue')">Blue</button>
+    18:     <button onclick="change_hair('hair_brown')">Brown</button>
+  app/views/character_generator/create.html.erb:15:in `_app_views_character_generator_create_html_erb__864616909330787477_69888720928780'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (23.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (46.7ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 134ms (Views: 133.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b697ffe2aae4eec6b286ae5fe179c2c1b9ac3a7966f56c0b9bc125d08d610c70.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:27 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:03:28 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:03:29 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:03:54 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 162ms (Views: 160.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b697ffe2aae4eec6b286ae5fe179c2c1b9ac3a7966f56c0b9bc125d08d610c70.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:03:55 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:03:56 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:11:32 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 292ms (Views: 290.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-8c0e99f5beb4961296bdff30628317556646f78e3db256b47f89365bc8d40571.js?body=1" for 127.0.0.1 at 2015-08-05 18:11:32 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:11:32 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:11:32 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:11:32 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:11:32 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:11:33 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:11:33 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:11:33 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:11:34 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 292ms (Views: 290.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-25e61dff2e5e159301a7686a788df20a3607567f5650b4538bddaec2d113275d.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:15:42 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:15:43 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:15:57 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 283ms (Views: 282.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-8b6e465d9e274ecf7ba05905fdc5e6388232f7a56ad7091781d0b0259aba0a6c.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:15:58 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:15:59 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 161ms (Views: 160.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-8c0e99f5beb4961296bdff30628317556646f78e3db256b47f89365bc8d40571.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:17:14 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:17:15 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 302ms (Views: 300.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 18:18:14 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 18:18:15 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:04:00 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@message) do |f| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_69888923333320'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (46.6ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:04:13 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@characters) do |f| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_69888717984220'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (45.8ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:04:40 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@character) do |c| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_35221440'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (47.4ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:05:51 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `characters_path' for #<#<Class:0x007f2090982f80>:0x007f2090981568>):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@character) do |c| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_35221440'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (47.3ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:06:25 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `characters_path' for #<#<Class:0x007f209145dbf8>:0x007f209144faa8>):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@character) do |c| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_35221440'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (46.6ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:07:11 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 401 Unauthorized in 153ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:07:11 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 148ms (Views: 146.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:07:11 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:07:12 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:07:12 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:07:12 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:07:12 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:07:12 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:07:12 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:07:13 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 19:07:13 -0300
+
+
+Started GET "/assets/hair_brown.png" for 127.0.0.1 at 2015-08-05 19:07:14 -0300
+
+
+Started GET "/assets/hair_white.png" for 127.0.0.1 at 2015-08-05 19:07:14 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:07:30 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `characters_path' for #<#<Class:0x007f209145dbf8>:0x007f209122bd58>):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@character) do |f| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_69888925320720'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (45.9ms)
+
+
+Started POST "/character_generator/console/repl_sessions/2f6271a92432266b458a6e790be6c9ea/trace" for 127.0.0.1 at 2015-08-05 19:07:37 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:09:20 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `characters_path' for #<#<Class:0x007f2091846120>:0x007f2091844078>):
+    13: 
+    14:    
+    15: 
+    16: <% form_for(@character) do |f| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_69888925320720'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (46.0ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:09:25 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (44.2ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `contactmethod' for #<Character:0x007f2091aaa0b0>):
+    16: <% form_for(@character) do |f| %>
+    17:   <%= f.radio_button :contactmethod, 'email', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :contactmethod, 'sms' %>
+    20:   <%= label :contactmethod_sms, 'SMS' %>
+    21: <% end %>
+    22: 
+  app/views/character_generator/create.html.erb:19:in `block in _app_views_character_generator_create_html_erb__864616909330787477_69888925320720'
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_69888925320720'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (22.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (45.9ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:10:28 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `hair_black' for #<Character:0x007f2078c50158>):
+    16: <% form_for(@character) do |f| %>
+    17:   <%= f.radio_button :hair, 'hair', :checked => true %> 
+    18:   <%= label :contactmethod_email, 'Email' %>
+    19:   <%= f.radio_button :hair_black, 'hair_black' %>
+    20:   <%= label :contactmethod_sms, 'SMS' %>
+    21: <% end %>
+    22: 
+  app/views/character_generator/create.html.erb:19:in `block in _app_views_character_generator_create_html_erb__864616909330787477_69888720900260'
+  app/views/character_generator/create.html.erb:16:in `_app_views_character_generator_create_html_erb__864616909330787477_69888720900260'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (21.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (47.4ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 142ms (Views: 141.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:10:36 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:10:44 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 165ms (Views: 164.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:44 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:10:45 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:11:40 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 156ms (Views: 155.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:11:41 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:12:04 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 161ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:18:56 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 139.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:20:04 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:20:05 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:20:05 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:20:05 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:20:05 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:20:05 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:20:05 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:20:06 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 167ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:21:52 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:21:56 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 19:21:57 -0300
+
+
+Started GET "/assets/hair_brown.png" for 127.0.0.1 at 2015-08-05 19:21:58 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 172ms (Views: 171.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:22:00 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:22:02 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 19:22:03 -0300
+
+
+Started GET "/assets/hair_brown.png" for 127.0.0.1 at 2015-08-05 19:22:04 -0300
+
+
+Started GET "/assets/hair_blonde.png" for 127.0.0.1 at 2015-08-05 19:22:09 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 161ms (Views: 160.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/character_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-2bbd6372b9c3e259c2b44794477fe5a293865bb135b3e8a3790d33c65835ed8f.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:22:21 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 167ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:22:24 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:22:25 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 19:22:26 -0300
+
+
+Started GET "/assets/hair_brown.png" for 127.0.0.1 at 2015-08-05 19:22:28 -0300
+
+
+Started GET "/assets/hair_white.png" for 127.0.0.1 at 2015-08-05 19:22:28 -0300
+
+
+Started GET "/assets/hair_blonde.png" for 127.0.0.1 at 2015-08-05 19:22:30 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 154.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:22:32 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 156ms (Views: 143.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:24:48 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 159ms (Views: 158.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:25:24 -0300
+
+
+Started POST "/characters" for 127.0.0.1 at 2015-08-05 19:25:32 -0300
+
+ActionController::RoutingError (uninitialized constant CharactersController):
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (25.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (50.1ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-05 19:30:19 -0300
+
+ActionController::RoutingError (uninitialized constant CharactersController):
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (46.0ms)
+
+
+Started GET "/character_generator/" for 127.0.0.1 at 2015-08-05 19:30:29 -0300
+
+ActionController::RoutingError (No route matches [GET] "/character_generator"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (26.1ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (51.0ms)
+
+
+Started GET "/character_generator/new" for 127.0.0.1 at 2015-08-05 19:30:32 -0300
+Processing by CharacterGeneratorController#new as HTML
+  Rendered character_generator/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 198ms (Views: 181.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:30:32 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:30:32 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:30:32 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:30:33 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:30:33 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:30:33 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:30:33 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:30:35 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 19:30:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropChar (20150805224024)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150805224024"]]
+  [1m[35m (123.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCharacters (20150805224422)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "hair" varchar, "skin" varchar, "shirt" varchar, "pants" varchar, "gender" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+SQLite3::SQLException: table "characters" already exists: CREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "hair" varchar, "skin" varchar, "shirt" varchar, "pants" varchar, "gender" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCharacters (20150805224422)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "hair" varchar, "skin" varchar, "shirt" varchar, "pants" varchar, "gender" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+SQLite3::SQLException: table "characters" already exists: CREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "hair" varchar, "skin" varchar, "shirt" varchar, "pants" varchar, "gender" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCharacters (20150805224422)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "hair" varchar, "skin" varchar, "shirt" varchar, "pants" varchar, "gender" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_characters_on_User_id" ON "characters" ("User_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150805224422"]]
+  [1m[36m (183.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-05 19:47:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-05 19:47:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 643ms (Views: 620.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-05 19:47:27 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-05 19:47:34 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qnZU0qH/vG+ebb0h2EzsJMEeuQvYicl5IJLdDYE3Q4uiPPe95vmccH2Y5/aQuHHZlS4C7+b32VKUGpSjuF25Pw==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-08-05 17:47:44.353037"], ["current_sign_in_at", "2015-08-05 22:47:34.829778"], ["sign_in_count", 10], ["updated_at", "2015-08-05 22:47:34.831682"], ["id", 2]]
+  [1m[36m (144.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/character_generator/create
+Completed 302 Found in 349ms (ActiveRecord: 145.2ms)
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 19:47:35 -0300
+
+ActionController::RoutingError (uninitialized constant CharacterGeneratorController):
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.2) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jbull/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (27.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (55.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-05 19:47:45 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 216ms (Views: 211.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-05 19:47:51 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT "characters".* FROM "characters"[0m
+  Rendered characters/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 158ms (Views: 148.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-05 19:47:54 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/_form.html.erb (40.8ms)
+  Rendered characters/new.html.erb within layouts/application (44.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 220ms (Views: 209.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-05 19:50:19 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 180ms (Views: 179.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 19:50:19 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 19:50:20 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 19:50:20 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 19:50:20 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 19:50:20 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 19:50:20 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 19:50:20 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 19:50:23 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 19:50:24 -0300
+
+
+Started GET "/assets/hair_brown.png" for 127.0.0.1 at 2015-08-05 19:50:25 -0300
+
+
+Started GET "/assets/hair_white.png" for 127.0.0.1 at 2015-08-05 19:50:26 -0300
+
+
+Started GET "/assets/hair_blonde.png" for 127.0.0.1 at 2015-08-05 19:50:27 -0300
+
+
+Started POST "/characters" for 127.0.0.1 at 2015-08-05 19:50:35 -0300
+Processing by CharactersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MiPVLXMa5ecVOW82Gb7LEOSThzjYIiKIXTWIAWZgKfjLMozAuXY/GkU/ce+HMBCy0pnR89wRZkWpLy+wT/HeSg==", "character"=>{"hair"=>"hair"}, "commit"=>"Create Character"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "characters" ("hair", "created_at", "updated_at") VALUES (?, ?, ?)  [["hair", "hair"], ["created_at", "2015-08-05 22:50:35.970420"], ["updated_at", "2015-08-05 22:50:35.970420"]]
+  [1m[36m (108.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/characters/1
+Completed 302 Found in 116ms (ActiveRecord: 109.4ms)
+
+
+Started GET "/characters/1" for 127.0.0.1 at 2015-08-05 19:50:36 -0300
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered characters/show.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 229ms (Views: 212.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-05 19:50:49 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT "characters".* FROM "characters"
+  Rendered characters/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 148ms (Views: 147.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/characters/1" for 127.0.0.1 at 2015-08-05 19:50:53 -0300
+Processing by CharactersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SGMX7Pf1iY76fxyLJ7t2e3WRMgnlqggPC9TuG7w6n16xck4BPZlTc6p5AlK5Na3ZQ5tkwuGZTML/zkmqlato7A==", "id"=>"1"}
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "characters" WHERE "characters"."id" = ?  [["id", 1]]
+  [1m[36m (172.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/characters
+Completed 302 Found in 180ms (ActiveRecord: 173.9ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-05 19:50:53 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT "characters".* FROM "characters"
+  Rendered characters/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 159ms (Views: 157.5ms | ActiveRecord: 0.3ms)

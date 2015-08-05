@@ -4,12 +4,20 @@ one:
   name: MyString
   xp: 1
   gold: 1
-  img: MyString
+  hair: MyString
+  skin: MyString
+  shirt: MyString
+  pants: MyString
+  gender: MyString
   User_id: 
 
 two:
   name: MyString
   xp: 1
   gold: 1
-  img: MyString
+  hair: MyString
+  skin: MyString
+  shirt: MyString
+  pants: MyString
+  gender: MyString
   User_id: 
