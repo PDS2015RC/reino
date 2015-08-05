@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'character_generator/create'
+
   resources :lessons
   get 'main/index'
 

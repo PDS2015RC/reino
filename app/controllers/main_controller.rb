@@ -3,7 +3,7 @@ class MainController < ApplicationController
 
     if user_signed_in?
 
-      redirect_to quiz_catalog_path
+      #redirect_to quiz_catalog_path
 
     else
 
