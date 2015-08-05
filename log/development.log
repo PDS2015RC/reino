@@ -12817,3 +12817,83 @@ Started GET "/assets/hair_white.png" for 127.0.0.1 at 2015-08-05 17:29:05 -0300
 
 
 Started GET "/assets/hair_blonde.png" for 127.0.0.1 at 2015-08-05 17:29:06 -0300
+
+
+Started GET "/character_generator/create" for 127.0.0.1 at 2015-08-05 17:33:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CharacterGeneratorController#create as HTML
+  Rendered character_generator/create.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 557ms (Views: 535.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-05 17:33:30 -0300
+
+
+Started GET "/assets/hair_blue.png" for 127.0.0.1 at 2015-08-05 17:33:31 -0300
+
+
+Started GET "/assets/hair_brown.png" for 127.0.0.1 at 2015-08-05 17:33:32 -0300
+
+
+Started GET "/assets/hair_white.png" for 127.0.0.1 at 2015-08-05 17:33:32 -0300
+
+
+Started GET "/assets/hair_blonde.png" for 127.0.0.1 at 2015-08-05 17:33:33 -0300
+
+
+Started GET "/assets/hair_black.png" for 127.0.0.1 at 2015-08-05 17:33:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImgSrcToCharacters (20150805204345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "characters" ADD "hair" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "characters" ADD "skin" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "characters" ADD "shirt" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "characters" ADD "pants" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "characters" ADD "gender" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150805204345"]]
+  [1m[36m (131.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
