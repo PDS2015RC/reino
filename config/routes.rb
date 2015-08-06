@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :characters
-  get 'character_generator/create'
-  get 'character_generator/new'
+  
+  
 
   resources :characters
   resources :lessons
