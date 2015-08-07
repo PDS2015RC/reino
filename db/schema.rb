@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807222534) do
+ActiveRecord::Schema.define(version: 20150807225529) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20150807222534) do
     t.string   "skin"
     t.string   "shirt"
     t.string   "pants"
-    t.string   "gender"
     t.integer  "User_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

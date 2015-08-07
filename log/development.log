@@ -23686,3 +23686,186 @@ Processing by MainController#index as HTML
   Rendered main/index.html.erb within layouts/application (0.0ms)
   Rendered layouts/_navbar.html.erb (0.0ms)
 Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-07 19:46:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered main/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 415ms (Views: 382.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 124ms (Views: 110.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 19:46:08 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-07 19:46:10 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 19:46:11 -0300
+
+
+Started GET "/lessons" for 127.0.0.1 at 2015-08-07 19:46:17 -0300
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 118ms (Views: 113.0ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropCharacters (20150807225212)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "characters"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150807225212"]]
+  [1m[36m (139.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCharacters (20150807225529)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "xp" integer, "gold" integer, "hair" varchar, "skin" varchar, "shirt" varchar, "pants" varchar, "User_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_characters_on_User_id" ON "characters" ("User_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150807225529"]]
+  [1m[36m (133.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_characters_on_User_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-07 19:58:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered main/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 393ms (Views: 364.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-07 19:58:47 -0300
+Processing by QuizController#catalog as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered quiz/catalog.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 81.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-07 19:59:11 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-07 19:59:13 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 97ms (Views: 95.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quiz/index?subject=loops&url=DWkyl-1rkW4" for 127.0.0.1 at 2015-08-07 19:59:14 -0300
+Processing by QuizController#index as HTML
+  Parameters: {"subject"=>"loops", "url"=>"DWkyl-1rkW4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."lesson" = ?  ORDER BY RANDOM() LIMIT 5[0m  [["lesson", "loops"]]
+  Rendered quiz/index.html.erb within layouts/application (92.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 179ms (Views: 175.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 128ms (Views: 111.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 19:59:20 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 19:59:20 -0300

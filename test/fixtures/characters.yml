@@ -8,7 +8,6 @@ one:
   skin: MyString
   shirt: MyString
   pants: MyString
-  gender: MyString
   User_id: 
 
 two:
@@ -19,5 +18,4 @@ two:
   skin: MyString
   shirt: MyString
   pants: MyString
-  gender: MyString
   User_id: 
