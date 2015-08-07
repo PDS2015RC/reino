@@ -19964,3 +19964,1096 @@ Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-06 18:49:06 -0300
 
 
 Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-06 18:49:06 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-07 17:07:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-07 17:07:34 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (112.9ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 852ms (Views: 782.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:07:35 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-07 17:07:47 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1LynY0O8EM9qJUbQFu2SGYVPMhT1vezqBv3sXeIhvzxm6y7fIXLv3fccj2G440Rtf2V5q0LVYgnC6z8xrwBCog==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-08-06 21:20:45.502405"], ["current_sign_in_at", "2015-08-07 20:07:47.434149"], ["sign_in_count", 14], ["updated_at", "2015-08-07 20:07:47.435344"], ["id", 2]]
+  [1m[36m (113.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 462ms (ActiveRecord: 114.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-07 17:07:47 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered main/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/" for 127.0.0.1 at 2015-08-07 17:07:53 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT "characters".* FROM "characters"[0m
+  Rendered characters/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 225ms (Views: 98.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:07:54 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 120ms (Views: 111.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:07:54 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:07:54 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:07:55 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:07:55 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:07:55 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:07:55 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:07:55 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 110ms (Views: 109.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:07:56 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:14:10 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `torso' for #<Character:0x007f0b118681c0>):
+    30: 
+    31:   <%= f.radio_button :torso, 'torso', onClick: "change('torso', 'torso');", :checked => true %> 
+    32:   <%= label :torso, 'Default'%>
+    33:   <%= f.radio_button :torso, 'torso_blue', onClick: "change('torso','torso_blue');" %>
+    34:   <%= label :torso_blue, 'Blue' %>
+    35:   <%= f.radio_button :torso, 'hair_gray', onClick: "change('torso','torso_gray');"%> 
+    36:   <%= label :torso_gray, 'Gray' %>
+  app/views/characters/new.html.erb:33:in `block in _app_views_characters_new_html_erb__976553892871345714_69842757645200'
+  app/views/characters/new.html.erb:18:in `_app_views_characters_new_html_erb__976553892871345714_69842757645200'
+
+
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jbull/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (34.7ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 102ms (Views: 101.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:22:44 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:22:47 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-07 17:22:49 -0300
+
+
+Started GET "/assets/torso_purple.png" for 127.0.0.1 at 2015-08-07 17:22:50 -0300
+
+
+Started GET "/assets/hair_pink.png" for 127.0.0.1 at 2015-08-07 17:22:53 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 133ms (Views: 132.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:23:52 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-07 17:23:55 -0300
+
+
+Started GET "/assets/torso_purple.png" for 127.0.0.1 at 2015-08-07 17:24:03 -0300
+
+
+Started GET "/assets/hair_pink.png" for 127.0.0.1 at 2015-08-07 17:24:04 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-07 17:24:15 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:24:22 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-07 17:24:23 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:25:58 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-07 17:26:00 -0300
+
+
+Started GET "/assets/torso_purple.png" for 127.0.0.1 at 2015-08-07 17:26:00 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-07 17:26:03 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:27:14 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 110ms (Views: 109.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:27:14 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:27:15 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:27:15 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:27:15 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:27:15 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:27:15 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:27:15 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-07 17:27:16 -0300
+
+
+Started GET "/assets/hair_pink.png" for 127.0.0.1 at 2015-08-07 17:27:18 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-07 17:27:19 -0300
+
+
+Started GET "/assets/hair_yellow.png" for 127.0.0.1 at 2015-08-07 17:27:20 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-07 17:27:26 -0300
+
+
+Started GET "/assets/torso_purple.png" for 127.0.0.1 at 2015-08-07 17:27:28 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:27:33 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:29:01 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 115ms (Views: 114.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:38:41 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 106ms (Views: 105.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:38:54 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:38:55 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:38:55 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:38:55 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:38:55 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:38:55 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:38:55 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:38:57 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 117ms (Views: 115.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:41:55 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:41:56 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:41:56 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:41:56 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:41:56 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:41:56 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:41:56 -0300
+
+
+Started GET "/assets/head_green.png" for 127.0.0.1 at 2015-08-07 17:41:57 -0300
+
+
+Started GET "/assets/leftArm_green.png" for 127.0.0.1 at 2015-08-07 17:41:57 -0300
+
+
+Started GET "/assets/rightArm_green.png" for 127.0.0.1 at 2015-08-07 17:41:57 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 114ms (Views: 112.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:46:45 -0300
+
+
+Started GET "/assets/head_green.png" for 127.0.0.1 at 2015-08-07 17:46:47 -0300
+
+
+Started GET "/assets/rightArm_green.png" for 127.0.0.1 at 2015-08-07 17:46:47 -0300
+
+
+Started GET "/assets/leftArm_green.png" for 127.0.0.1 at 2015-08-07 17:46:47 -0300
+
+
+Started GET "/assets/head_pink.png" for 127.0.0.1 at 2015-08-07 17:46:49 -0300
+
+
+Started GET "/assets/rightArm_pink.png" for 127.0.0.1 at 2015-08-07 17:46:49 -0300
+
+
+Started GET "/assets/leftArm_pink.png" for 127.0.0.1 at 2015-08-07 17:46:49 -0300
+
+
+Started GET "/assets/head_yellow.png" for 127.0.0.1 at 2015-08-07 17:46:50 -0300
+
+
+Started GET "/assets/leftArm_yellow.png" for 127.0.0.1 at 2015-08-07 17:46:50 -0300
+
+
+Started GET "/assets/rightArm_yellow.png" for 127.0.0.1 at 2015-08-07 17:46:50 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-07 17:46:54 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:46:54 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 135ms (Views: 134.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:50:19 -0300
+
+
+Started GET "/assets/legs_gray.png" for 127.0.0.1 at 2015-08-07 17:50:21 -0300
+
+
+Started GET "/assets/legs_green.png" for 127.0.0.1 at 2015-08-07 17:50:22 -0300
+
+
+Started GET "/assets/head_green.png" for 127.0.0.1 at 2015-08-07 17:50:24 -0300
+
+
+Started GET "/assets/leftArm_green.png" for 127.0.0.1 at 2015-08-07 17:50:24 -0300
+
+
+Started GET "/assets/rightArm_green.png" for 127.0.0.1 at 2015-08-07 17:50:24 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:50:25 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-07 17:50:26 -0300
+
+
+Started GET "/assets/hair_pink.png" for 127.0.0.1 at 2015-08-07 17:50:37 -0300
+
+
+Started GET "/assets/torso_purple.png" for 127.0.0.1 at 2015-08-07 17:50:38 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-07 17:50:46 -0300
+
+
+Started GET "/assets/head_pink.png" for 127.0.0.1 at 2015-08-07 17:50:49 -0300
+
+
+Started GET "/assets/leftArm_pink.png" for 127.0.0.1 at 2015-08-07 17:50:49 -0300
+
+
+Started GET "/assets/rightArm_pink.png" for 127.0.0.1 at 2015-08-07 17:50:49 -0300
+
+
+Started GET "/assets/leftArm_yellow.png" for 127.0.0.1 at 2015-08-07 17:50:51 -0300
+
+
+Started GET "/assets/head_yellow.png" for 127.0.0.1 at 2015-08-07 17:50:51 -0300
+
+
+Started GET "/assets/rightArm_yellow.png" for 127.0.0.1 at 2015-08-07 17:50:51 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:51:23 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:51:24 -0300
+
+
+Started GET "/assets/legs_gray.png" for 127.0.0.1 at 2015-08-07 17:51:30 -0300
+
+
+Started GET "/assets/legs_green.png" for 127.0.0.1 at 2015-08-07 17:51:31 -0300
+
+
+Started GET "/assets/leftArm_green.png" for 127.0.0.1 at 2015-08-07 17:51:34 -0300
+
+
+Started GET "/assets/head_green.png" for 127.0.0.1 at 2015-08-07 17:51:34 -0300
+
+
+Started GET "/assets/rightArm_green.png" for 127.0.0.1 at 2015-08-07 17:51:34 -0300
+
+
+Started GET "/assets/leftArm_pink.png" for 127.0.0.1 at 2015-08-07 17:51:37 -0300
+
+
+Started GET "/assets/head_pink.png" for 127.0.0.1 at 2015-08-07 17:51:37 -0300
+
+
+Started GET "/assets/rightArm_pink.png" for 127.0.0.1 at 2015-08-07 17:51:37 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:51:40 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:51:44 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-07 17:51:52 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+Processing by CharactersController#new as HTML
+  Rendered characters/new.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 109ms (Views: 108.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-07 17:51:56 -0300
