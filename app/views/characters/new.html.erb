@@ -1,0 +1,74 @@
+<h1>New Character</h1>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Character Creation</title>
+    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+  </head>
+  <body>
+    <div id="canvasDiv"></div>
+    <script type="text/javascript" src="/assets/html5-canvas-game-character-1.js"></script>
+    <script type="text/javascript">
+       prepareCanvas(document.getElementById("canvasDiv"), 490, 220);
+    </script>
+
+   
+
+<%= form_for(@character) do |f| %>
+  <div id="hair_div">
+  <%= f.radio_button :hair, 'hair', onClick: "change('hair', 'hair');", :checked => true %> 
+  <%= label :hair_default, 'Default'%>
+  <%= f.radio_button :hair, 'hair_green', onClick: "change('hair','hair_green');" %>
+  <%= label :hair_green, 'Green' %>
+  <%= f.radio_button :hair, 'hair_pink', onClick: "change('hair','hair_pink');"%> 
+  <%= label :hair_blue, 'Pink' %>
+  <%= f.radio_button :hair, 'hair_red', onClick: "change('hair','hair_red');" %>
+  <%= label :hair_brown, 'Red' %>
+  <%= f.radio_button :hair, 'hair_yellow', onClick: "change('hair','hair_yellow');" %>
+  <%= label :hair_yellow, 'yellow' %>
+  </div>
+
+  <div id="shirt_div">
+  <%= f.radio_button :shirt, 'torso', onClick: "change('torso', 'torso');", :checked => true %> 
+  <%= label :torso, 'Default'%>
+  <%= f.radio_button :shirt, 'torso_blue', onClick: "change('torso','torso_blue');" %>
+  <%= label :shirt_blue, 'Blue' %>
+  <%= f.radio_button :shirt, 'hair_gray', onClick: "change('torso','torso_gray');"%> 
+  <%= label :shirt_gray, 'Gray' %>
+  <%= f.radio_button :shirt, 'torso_purple', onClick: "change('torso','torso_purple');" %>
+  <%= label :shirt_purple, 'Purple' %>
+  </div>
+
+   <div id="skin_div">
+  <%= f.radio_button :skin, 'default', onClick: "change('head', 'head');change('leftArm', 'leftArm');change('rightArm', 'rightArm');", :checked => true %> 
+  <%= label :skin, 'Default'%>
+  <%= f.radio_button :skin, 'green', onClick: "change('head', 'head_green');change('leftArm', 'leftArm_green');change('rightArm', 'rightArm_green');" %>
+  <%= label :skin, 'Green' %>
+  <%= f.radio_button :skin, 'pink', onClick: "change('head', 'head_pink');change('leftArm', 'leftArm_pink');change('rightArm', 'rightArm_pink');"%> 
+  <%= label :skin, 'Pink' %>
+  <%= f.radio_button :skin, 'yellow', onClick: "change('head', 'head_yellow');change('leftArm', 'leftArm_yellow');change('rightArm', 'rightArm_yellow');" %>
+  <%= label :skin, 'Yellow' %>
+  </div>
+
+  <div id="pants">
+  <%= f.radio_button :pants, 'default', onClick: "change('legs', 'legs');", :checked => true %> 
+  <%= label :pants, 'Default'%>
+  <%= f.radio_button :pants, 'gray', onClick: "change('legs', 'legs_gray');" %>
+  <%= label :pants, 'Gray' %>
+  <%= f.radio_button :pants, 'green', onClick: "change('legs', 'legs_green');"%> 
+  <%= label :skin, 'Green' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+
+  </body>
+</html>
+
+
+<%= link_to 'Back', characters_path %>
