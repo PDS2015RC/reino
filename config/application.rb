@@ -28,7 +28,7 @@ module Reino
         :domain      => 'mail.google.com',
         :port        => 587,
         :user_name   =>"reinodocodigo@gmail.com",
-        :password    => "Reinotads20141",
+        :password    => "",
         :authentication => 'login',
         :enable_starttls_auto => true
 
