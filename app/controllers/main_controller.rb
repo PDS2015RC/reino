@@ -5,6 +5,7 @@ class MainController < ApplicationController
 
       #redirect_to quiz_catalog_path
 
+
     else
 
       redirect_to new_user_session_path

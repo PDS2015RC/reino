@@ -1,8 +1,22 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :admin_check
+
   # GET /questions
   # GET /questions.json
+
+  def admin_check
+
+    if current_user.admin == false
+
+      redirect_to main_index_path
+
+    end
+
+
+  end
+
   def index
     @questions = Question.all
   end
