@@ -34422,3 +34422,1094 @@ Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-09 21:12:15 -0300
 
 
 Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-09 21:12:15 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 09:34:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 29ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-10 09:34:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (89.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 759ms (Views: 756.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-10 09:34:46 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VKq71zGMGIepKjNkrBcnNXyZql0dIVR5Jdx+c2NA8eG0Lft5my4rIuHspkJCB4Pq6rCNTRNBeL6/P6oeZSLhkA==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-08-09 22:44:00.058656"], ["current_sign_in_at", "2015-08-10 12:34:46.847478"], ["sign_in_count", 5], ["updated_at", "2015-08-10 12:34:46.848922"], ["id", 1]]
+  [1m[35m (190.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 302ms (ActiveRecord: 191.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 09:34:47 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 136.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 09:34:50 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 117.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2015-08-10 09:34:56 -0300
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 127ms (Views: 125.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/lessons/2" for 127.0.0.1 at 2015-08-10 09:35:02 -0300
+Processing by LessonsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Hi2s4BuAqeYYsfQeBtSi655woPfhJIDPQ211x2kF5Jaoz3ivZPwfKOpJQTWKBkviZHqKpeTrg0sv2pBDibm3sA==", "id"=>"2"}
+  [1m[35mLesson Load (0.2ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "lessons" WHERE "lessons"."id" = ?  [["id", 2]]
+  [1m[36m (151.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lessons
+Completed 302 Found in 156ms (ActiveRecord: 151.6ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2015-08-10 09:35:02 -0300
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 96ms (Views: 95.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 154ms (Views: 113.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:35:08 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:35:09 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-10 09:35:09 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 09:35:09 -0300
+
+
+Started DELETE "/characters/20" for 127.0.0.1 at 2015-08-10 09:35:19 -0300
+Processing by CharactersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"53NceK5kg9dw4m0hPHfWqqHTS0b4pOYrQJuBG8qYpzBRkYg30Rg1GYIa2AqwpT+jW9lhFP1r5a8sLGSfKiT0Fg==", "id"=>"20"}
+  [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 20]]
+  [1m[35m (192.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/characters
+Completed 302 Found in 198ms (ActiveRecord: 193.7ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:35:19 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 107ms (Views: 104.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:35:23 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 09:35:35 -0300
+Processing by QuizController#catalog as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mLesson Load (0.1ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered quiz/catalog.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-08-10 09:35:37 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zvm1zJMwiY/NlXGnm9u6sdWIrG/zKz8N3jC0U7WBkMx4G2GD7Ew/QT9txIwXCVO4L4KGPfbkPImyh1HXVT3D6g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 09:35:37 -0300
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-10 09:35:37 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-10 09:38:23 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSrB4aruithLFzz8KdWpzciwj5PafVcvJ6wYYlxAjwWLEJ1lueOKdbrWgpgDuRunKRCobuHdl+x/JCtrrPZxMA==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-08-10 12:34:46.847478"], ["current_sign_in_at", "2015-08-10 12:38:23.962347"], ["sign_in_count", 6], ["updated_at", "2015-08-10 12:38:23.963163"], ["id", 1]]
+  [1m[36m (175.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 274ms (ActiveRecord: 175.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 09:38:24 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 97ms (Views: 94.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 09:38:27 -0300
+Processing by QuizController#catalog as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered quiz/catalog.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/" for 127.0.0.1 at 2015-08-10 09:38:36 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+Processing by CharactersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/new.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:38:40 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+Processing by CharactersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 103ms (Views: 99.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:38:42 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-10 09:38:49 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-10 09:38:51 -0300
+
+
+Started GET "/assets/head_green.png" for 127.0.0.1 at 2015-08-10 09:38:54 -0300
+
+
+Started GET "/assets/leftArm_green.png" for 127.0.0.1 at 2015-08-10 09:38:54 -0300
+
+
+Started GET "/assets/rightArm_green.png" for 127.0.0.1 at 2015-08-10 09:38:54 -0300
+
+
+Started GET "/assets/leftArm_yellow.png" for 127.0.0.1 at 2015-08-10 09:38:56 -0300
+
+
+Started GET "/assets/head_yellow.png" for 127.0.0.1 at 2015-08-10 09:38:56 -0300
+
+
+Started GET "/assets/rightArm_yellow.png" for 127.0.0.1 at 2015-08-10 09:38:56 -0300
+
+
+Started GET "/assets/legs_gray.png" for 127.0.0.1 at 2015-08-10 09:38:59 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 09:39:03 -0300
+
+
+Started POST "/characters" for 127.0.0.1 at 2015-08-10 09:39:06 -0300
+Processing by CharactersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g+ZQxjsZKzCktUW+xvZPfA3DbUkqLp5gZl7oQB4JSfjd84MzZcqnIVGou8cvsIqluQYbQWuQtlNEpOleSkmNqg==", "character"=>{"name"=>"JBull", "hair"=>"hair_red", "shirt"=>"torso_gray", "skin"=>"default", "pants"=>"legs_gray"}, "commit"=>"Create Character"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "characters" ("name", "hair", "skin", "shirt", "pants", "User_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "JBull"], ["hair", "hair_red"], ["skin", "default"], ["shirt", "torso_gray"], ["pants", "legs_gray"], ["User_id", 1], ["created_at", "2015-08-10 12:39:06.237802"], ["updated_at", "2015-08-10 12:39:06.237802"]]
+  [1m[35m (203.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/characters/21
+Completed 302 Found in 211ms (ActiveRecord: 204.2ms)
+
+
+Started GET "/characters/21" for 127.0.0.1 at 2015-08-10 09:39:06 -0300
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered characters/show.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 150ms (Views: 148.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 92.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/assets/legs_gray.png" for 127.0.0.1 at 2015-08-10 09:39:08 -0300
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:39:09 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 95ms (Views: 92.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started GET "/assets/legs_gray.png" for 127.0.0.1 at 2015-08-10 09:39:10 -0300
+
+
+Started DELETE "/characters/21" for 127.0.0.1 at 2015-08-10 09:39:29 -0300
+Processing by CharactersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"euGe/xV2UIdf6++HPVGtQUNu1Sdcu4g7w6oVVaEM05ok9E0KS6Xclqr2Ef7UF2iY96ujLx0FoAjhUBRL9UwXyA==", "id"=>"21"}
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "characters" WHERE "characters"."id" = ?  [["id", 21]]
+  [1m[36m (415.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/characters
+Completed 302 Found in 420ms (ActiveRecord: 415.8ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:39:30 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:39:33 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-08-10 09:39:34 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BEwLpPUGWwPfCkCD+fXQ2XcAFPMug/r4Om+PWW+q86ZaWdhRq9XXEioXvvoQsxUAw8Vi+2890ssYlY5HO+o39A=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 09:39:34 -0300
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-10 09:39:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-10 09:45:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dwTxa9RLWxHWBfmalRU0f1+qV695PjFP5yLZD3LwLU9UsIxVTjLYew2kcEbRJf8BqCRlqrp24ox1ZVKfLNLe8Q==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-08-10 12:38:23.962347"], ["current_sign_in_at", "2015-08-10 12:45:40.087135"], ["sign_in_count", 7], ["updated_at", "2015-08-10 12:45:40.088051"], ["id", 1]]
+  [1m[35m (186.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 292ms (ActiveRecord: 186.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 09:45:40 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 09:45:55 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2015-08-10 09:46:05 -0300
+Processing by LessonsController#index as HTML
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered lessons/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 101ms (Views: 99.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/lessons/new" for 127.0.0.1 at 2015-08-10 09:46:09 -0300
+Processing by LessonsController#new as HTML
+  Rendered lessons/_form.html.erb (2.0ms)
+  Rendered lessons/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 122ms (Views: 121.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/lessons" for 127.0.0.1 at 2015-08-10 09:46:28 -0300
+Processing by LessonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0hIszbB9lYYmHDC8juYQPktGYQ9ciOrrBAm6BK3UVo8dy3wbYKXLFqAwBzVGQHeCdIClTJi+YZ01UJ/ZT/Xtsg==", "lesson"=>{"url"=>"45HA6h_FTBg", "subject"=>"condicional_if"}, "commit"=>"Create Lesson"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "lessons" ("url", "subject", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "45HA6h_FTBg"], ["subject", "condicional_if"], ["created_at", "2015-08-10 12:46:28.582277"], ["updated_at", "2015-08-10 12:46:28.582277"]]
+  [1m[36m (147.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lessons/3
+Completed 302 Found in 154ms (ActiveRecord: 148.1ms)
+
+
+Started GET "/lessons/3" for 127.0.0.1 at 2015-08-10 09:46:28 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mLesson Load (0.1ms)[0m  SELECT  "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lessons/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 09:46:32 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quiz/index?subject=condicional_if&url=45HA6h_FTBg" for 127.0.0.1 at 2015-08-10 09:46:36 -0300
+Processing by QuizController#index as HTML
+  Parameters: {"subject"=>"condicional_if", "url"=>"45HA6h_FTBg"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."lesson" = ?  ORDER BY RANDOM() LIMIT 5[0m  [["lesson", "condicional_if"]]
+  Rendered quiz/index.html.erb within layouts/application (83.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 206ms (Views: 173.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 09:46:52 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quiz/index?subject=loops&url=DWkyl-1rkW4" for 127.0.0.1 at 2015-08-10 09:46:54 -0300
+Processing by QuizController#index as HTML
+  Parameters: {"subject"=>"loops", "url"=>"DWkyl-1rkW4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."lesson" = ?  ORDER BY RANDOM() LIMIT 5[0m  [["lesson", "loops"]]
+  Rendered quiz/index.html.erb within layouts/application (78.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 171ms (Views: 168.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/characters/" for 127.0.0.1 at 2015-08-10 09:47:21 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+Processing by CharactersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 98.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:47:30 -0300
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+Processing by CharactersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 107.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:47:33 -0300
+
+
+Started GET "/assets/hair_green.png" for 127.0.0.1 at 2015-08-10 09:47:41 -0300
+
+
+Started GET "/assets/hair_pink.png" for 127.0.0.1 at 2015-08-10 09:47:43 -0300
+
+
+Started GET "/assets/torso_gray.png" for 127.0.0.1 at 2015-08-10 09:47:44 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 09:47:46 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 09:47:48 -0300
+
+
+Started GET "/assets/head_green.png" for 127.0.0.1 at 2015-08-10 09:47:49 -0300
+
+
+Started GET "/assets/rightArm_green.png" for 127.0.0.1 at 2015-08-10 09:47:49 -0300
+
+
+Started GET "/assets/leftArm_green.png" for 127.0.0.1 at 2015-08-10 09:47:49 -0300
+
+
+Started POST "/characters" for 127.0.0.1 at 2015-08-10 09:47:55 -0300
+Processing by CharactersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gfQlM+j+P3S9M9Ljr8m9qLm/zMRV4lf346k7g36emsp3oBCH3umbVTY+MJGGUFKnSA7cNVhAinu14Ez79vBVg==", "character"=>{"name"=>"JBull", "hair"=>"hair_red", "shirt"=>"torso_blue", "skin"=>"default", "pants"=>"legs"}, "commit"=>"Create Character"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "characters" ("name", "hair", "skin", "shirt", "pants", "User_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "JBull"], ["hair", "hair_red"], ["skin", "default"], ["shirt", "torso_blue"], ["pants", "legs"], ["User_id", 1], ["created_at", "2015-08-10 12:47:55.527749"], ["updated_at", "2015-08-10 12:47:55.527749"]]
+  [1m[36m (197.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/characters/22
+Completed 302 Found in 206ms (ActiveRecord: 198.1ms)
+
+
+Started GET "/characters/22" for 127.0.0.1 at 2015-08-10 09:47:55 -0300
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered characters/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 118ms (Views: 116.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 101.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 09:48:19 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 19:45:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-08-10 19:45:14 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (95.7ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 1002ms (Views: 931.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-08-10 19:45:28 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"flbJblAtp90TNv4sijXvHIe0g6OBv5tFQDl3DvCikXqaIIsQFs3RbJj3Tp8DFHEqFmfkUsmuDHPuf/abQO2/Jw==", "user"=>{"email"=>"kerarchie@yahoo.com.ar", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kerarchie@yahoo.com.ar"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (14.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-08-10 12:45:40.087135"], ["current_sign_in_at", "2015-08-10 22:45:29.031576"], ["sign_in_count", 8], ["updated_at", "2015-08-10 22:45:29.033009"], ["id", 1]]
+  [1m[36m (145.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 428ms (ActiveRecord: 159.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 19:45:29 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 112.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 19:46:18 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 98.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:46:23 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 85.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 19:46:25 -0300
+Processing by QuizController#catalog as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered quiz/catalog.html.erb within layouts/application (98.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 208ms (Views: 205.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:46:26 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:46:48 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 93ms (Views: 89.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-2cb4f12040bba707a20b8166b2462ba9926772ba623c1997cd8d06a1391d2e24.css?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:53 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/characters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/excanvas.self-eb83b648be468f90407bdd8e210aac8c167b9167a7770287ca771428a6986997.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/html5-canvas-game-character-1.self-b67a90dc71c921681b3b8be33714bc56032197a180c596946e7784a488d211ad.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/lessons.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/quiz.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-08-10 19:50:54 -0300
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 234ms (Views: 92.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 19:50:55 -0300
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 19:50:57 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 104.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 19:50:58 -0300
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 19:51:01 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 119.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:51:02 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:51:58 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 103ms (Views: 101.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:52:08 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 98.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+Processing by CharactersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1[0m
+  Rendered characters/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 95ms (Views: 91.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 19:52:17 -0300
+
+
+Started GET "/characters" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+Processing by CharactersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "characters" WHERE "characters"."User_id" = 1[0m
+  [1m[35mCharacter Load (0.1ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."User_id" = 1
+  Rendered characters/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 126ms (Views: 122.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/html5-canvas-game-character-1.js" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/leftArm.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/legs.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/torso.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/hair.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/rightArm.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/head.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/hair_red.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/assets/torso_blue.png" for 127.0.0.1 at 2015-08-10 19:52:19 -0300
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:52:26 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 91.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 19:52:27 -0300
+Processing by QuizController#catalog as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLesson Load (0.1ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  Rendered quiz/catalog.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:52:29 -0300
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/catalog" for 127.0.0.1 at 2015-08-10 19:52:30 -0300
+Processing by QuizController#catalog as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mLesson Load (0.2ms)[0m  SELECT "lessons".* FROM "lessons"
+  Rendered quiz/catalog.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 121ms (Views: 118.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-08-10 19:52:32 -0300
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 98ms (Views: 94.3ms | ActiveRecord: 0.2ms)
