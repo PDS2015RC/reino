@@ -16,7 +16,14 @@
    
 
 <%= form_for(@character) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
   <div id="hair_div">
+  <%= f.label :hair %><br>
   <%= f.radio_button :hair, 'hair', onClick: "change('hair', 'hair');", :checked => true %> 
   <%= label :hair_default, 'Default'%>
   <%= f.radio_button :hair, 'hair_green', onClick: "change('hair','hair_green');" %>
@@ -30,17 +37,19 @@
   </div>
 
   <div id="shirt_div">
+  <%= f.label :shirt %><br>
   <%= f.radio_button :shirt, 'torso', onClick: "change('torso', 'torso');", :checked => true %> 
   <%= label :torso, 'Default'%>
   <%= f.radio_button :shirt, 'torso_blue', onClick: "change('torso','torso_blue');" %>
   <%= label :shirt_blue, 'Blue' %>
-  <%= f.radio_button :shirt, 'hair_gray', onClick: "change('torso','torso_gray');"%> 
+  <%= f.radio_button :shirt, 'torso_gray', onClick: "change('torso','torso_gray');"%> 
   <%= label :shirt_gray, 'Gray' %>
   <%= f.radio_button :shirt, 'torso_purple', onClick: "change('torso','torso_purple');" %>
   <%= label :shirt_purple, 'Purple' %>
   </div>
 
    <div id="skin_div">
+   <%= f.label :skin %><br>
   <%= f.radio_button :skin, 'default', onClick: "change('head', 'head');change('leftArm', 'leftArm');change('rightArm', 'rightArm');", :checked => true %> 
   <%= label :skin, 'Default'%>
   <%= f.radio_button :skin, 'green', onClick: "change('head', 'head_green');change('leftArm', 'leftArm_green');change('rightArm', 'rightArm_green');" %>
@@ -52,11 +61,12 @@
   </div>
 
   <div id="pants">
-  <%= f.radio_button :pants, 'default', onClick: "change('legs', 'legs');", :checked => true %> 
+  <%= f.label :pants %><br>
+  <%= f.radio_button :pants, 'legs', onClick: "change('legs', 'legs');", :checked => true %> 
   <%= label :pants, 'Default'%>
-  <%= f.radio_button :pants, 'gray', onClick: "change('legs', 'legs_gray');" %>
+  <%= f.radio_button :pants, 'legs_gray', onClick: "change('legs', 'legs_gray');" %>
   <%= label :pants, 'Gray' %>
-  <%= f.radio_button :pants, 'green', onClick: "change('legs', 'legs_green');"%> 
+  <%= f.radio_button :pants, 'legs_green', onClick: "change('legs', 'legs_green');"%> 
   <%= label :skin, 'Green' %>
   </div>
 

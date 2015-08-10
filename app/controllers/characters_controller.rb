@@ -14,7 +14,12 @@ class CharactersController < ApplicationController
 
   # GET /characters/new
   def new
-    @character = Character.new
+    @characters = Character.where(User_id: current_user)
+    if(@characters.size >= 1)
+      redirect_to characters_url
+    else  
+      @character = Character.new
+    end  
   end
 
   # GET /characters/1/edit

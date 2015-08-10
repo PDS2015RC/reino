@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Characters</h1>
+<h1>Character</h1>
+
+<%if @characters.size >= 1%>
 
 <table>
   <thead>
@@ -8,11 +10,6 @@
       <th>Name</th>
       <th>Xp</th>
       <th>Gold</th>
-      <th>Hair</th>
-      <th>Skin</th>
-      <th>Shirt</th>
-      <th>Pants</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,19 +20,31 @@
         <td><%= character.name %></td>
         <td><%= character.xp %></td>
         <td><%= character.gold %></td>
-        <td><%= character.hair %></td>
-        <td><%= character.skin %></td>
-        <td><%= character.shirt %></td>
-        <td><%= character.pants %></td>
-        <td><%= character.User %></td>
         <td><%= link_to 'Show', character %></td>
         <td><%= link_to 'Edit', edit_character_path(character) %></td>
         <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+   
   </tbody>
 </table>
 
 <br>
 
+<div id="canvasDiv"></div>
+<script type="text/javascript" src="/assets/html5-canvas-game-character-1.js"></script>
+<script type="text/javascript">
+  prepareCanvas(document.getElementById("canvasDiv"), 490, 220);
+  change('hair', "<%= character.hair %>");
+  change('torso', "<%= character.shirt %>");
+  change('legs', "<%= character.pants %>");
+  if("<%= character.skin %>" != "default"){
+  change('head', "head_" + "<%= character.skin %>");
+  change('leftArm', "leftArm_" + "<%= character.skin %>");
+  change('rightArm', "rightArm_" + "<%= character.skin %>");
+  }
+</script>
+ <% end %>
+<% else %>
+<h2>Voce ainda não tem um personagem</h2>
 <%= link_to 'New Character', new_character_path %>
+<% end %>
