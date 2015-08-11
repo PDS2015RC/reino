@@ -1,32 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Character</h1>
+<h1>Seu Personagem</h1>
 
 <%if @characters.size >= 1%>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Xp</th>
-      <th>Gold</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @characters.each do |character| %>
-      <tr>
-        <td><%= character.name %></td>
-        <td><%= character.xp %></td>
-        <td><%= character.gold %></td>
-        <td><%= link_to 'Show', character %></td>
-        <td><%= link_to 'Edit', edit_character_path(character) %></td>
-        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-   
-  </tbody>
-</table>
+  <% @characters.each do |character| %>
+  <h2><%= character.name %></h2>
+  <h3>xp: <%= character.xp %></h3>
+  <h3>Gold: <%= character.gold %></h3>
+  <%= link_to 'Show', character %>
+  <%= link_to 'Edit', edit_character_path(character) %>
+  <%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <br>
 
