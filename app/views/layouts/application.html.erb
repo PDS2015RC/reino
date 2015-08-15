@@ -2,20 +2,14 @@
 <html>
 <head>
   <title>Reino</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'styles', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render :partial => 'layouts/navbar' %>
-<div class="col-md-7 col-md-offset-3">
+<%= render :partial => 'layouts/masthead' %>
+<%= yield %>
 
-  <% if user_signed_in?%>
-      <p> Hello <%= current_user.name%> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete'%></p>
-      <br>
-  <%end%>
-
-  <%= yield %>
-</div>
 </body>
 </html>

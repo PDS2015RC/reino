@@ -9,9 +9,7 @@
   <h2><%= character.name %></h2>
   <h3>xp: <%= character.xp %></h3>
   <h3>Gold: <%= character.gold %></h3>
-  <%= link_to 'Show', character %>
-  <%= link_to 'Edit', edit_character_path(character) %>
-  <%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
 
 <br>
 
@@ -28,8 +26,10 @@
   change('rightArm', "rightArm_" + "<%= character.skin %>");
   }
 </script>
+<%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %>
  <% end %>
 <% else %>
 <h2>Voce ainda não tem um personagem</h2>
 <%= link_to 'New Character', new_character_path %>
 <% end %>
+

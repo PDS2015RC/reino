@@ -1,12 +1,45 @@
-<h1>Quiz#catalog</h1>
-
 <%@lessons_for_print = Lesson.all%>
 
-<% @lessons_for_print.each do |lesson| %>
-    
-     <%= link_to lesson.subject, quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %><br>   
-      
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel">
+        <div class="panel-body">
+
+
+					<% @lessons_for_print.each do |lesson| %>
+						
+						<!--
+							<%= link_to lesson.subject, quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %>
+						-->
+					
+							
+							<div class="row">    
+							  <br>
+							  <div class="col-md-2 col-sm-3 text-center">
+							    <a class="story-title" href="<%= quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %>"><img alt="imagem aqui" style="width:100px;height:100px" class="img-circle"></a>
+							  </div>
+							  <div class="col-md-10 col-sm-9">
+							    <h3><%= lesson.subject %></h3>
+							    <a href="<%= quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %>" class="btn btn-primary pull-right btnNext">Ir <i class="glyphicon glyphicon-chevron-right"></i></a>
+							    <div class="row">
+							      <div class="col-xs-9">
+							        <!--<h4><span class="label label-default">97thfloor.com</span></h4>-->
+									</div>
+							      <div class="col-xs-3"></div>
+							    </div>
+							    <br><br>
+							  </div>            
+							</div>							
+							<hr>
+
+					<% end %>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 

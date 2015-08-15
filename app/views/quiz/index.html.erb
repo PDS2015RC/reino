@@ -1,48 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Quiz</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<div class="container">
+  <div class="row">    
+    <div class="col-md-12">       
+      <div class="panel">
+        <div class="panel-body"> 
 
-<h1>Quiz#index</h1>
-<h2>Aula <%= @lesson.subject%></h2>
-<h2>video</h2>
-<iframe width="560" height="349" src="<%= "http://www.youtube.com/embed/"+@video %>"></iframe>
+          <!--/stories-->
+          <h2 class="text-center">Aula <%= @lesson.subject%></h2>
 
-<h1>Quiz</h1>
+          <div class="row">    
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="<%= "http://www.youtube.com/embed/"+@video %>"></iframe>
+            </div>                 
+          </div>
+          <hr>
 
-<p>Questões:</p>
-<form id ="formulario" method="get">
-<ul>
-	<% @questions.each do |question| %>
-			<%= question.statement %>
-			<% @alternativas = [question.a, question.b, question.c, question.d] %>
-			<% @alternativas.shuffle! %>
-			<br>
-			<label class="radio">
+          <!--Botão responder-->
+          <!--<div class="text-center">
+            <div class="btn-group botao">
+              <button type="button" class="btn btn-primary btn-lg" id="responder">Responder</button>
+            </div>
+          </div>
+          <hr>-->
+          <!--Botão responder-->
 
-				<input type="radio" name=<%= question.statement %> value="a"><%= @alternativas[0] %>
-			</label>
-			<label class="radio">
-				<input type="radio" name=<%= question.statement %> value="b"><%= @alternativas[1] %>
-			</label>
-			<label class="radio">
-				<input type="radio" name=<%= question.statement %> value="c"><%= @alternativas[2] %>
-			</label>
-			<label class="radio">
-				<input type="radio" name=<%= question.statement %> value="d"><%= @alternativas[3] %>
-			</label>
-			<br>
-	<% end %>	
-</ul>
- <button type="button">Pronto</button> 
-</form>
+          <p>Questões:</p>
 
-<%= yield %>
+          <form id ="formulario" method="get">          
+            <% @questions.each do |question| %>
+              <% @alternativas = [question.a, question.b, question.c, question.d] %>
+              <% @alternativas.shuffle! %>              
 
-</body>
-</html>
+                <!-- Questões-->
+                <div class="panel-default">
+                  <div class="panel panel-info">
+                    <div class="panel-heading"><%= question.statement %></div>
+                    <div class="panel-body">
+                      <div class="input-group">                   
+                        <input type="radio" aria-label="..."name=<%= question.statement %> value="a"><%= @alternativas[0] %><br>
+                        <input type="radio" aria-label="..."name=<%= question.statement %> value="b"><%= @alternativas[1] %><br>
+                        <input type="radio" aria-label="..."name=<%= question.statement %> value="c"><%= @alternativas[2] %><br>
+                        <input type="radio" aria-label="..."name=<%= question.statement %> value="d"><%= @alternativas[3] %><br>
+                      </div>                
+                    </div>
+                  </div>
+                </div>
+                <!-- Questões-->
+
+          <% end %>             
+          </form>
+
+          <!--Botão pronto-->
+          <div class="text-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success btn-lg" id="responder">Terminei</button>
+            </div>
+          </div>          
+          <!--Botão pronto-->
+
+        </div>
+      </div>
+
+    </div><!--/col-12-->
+  </div>
+</div>
