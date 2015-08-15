@@ -1,6 +1,6 @@
 class QuizController < ApplicationController
 
-  before_action :authenticate_user!
+
 
   def index
   	@lesson = Lesson.new(lesson_params)

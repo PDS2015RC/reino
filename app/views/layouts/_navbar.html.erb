@@ -20,9 +20,11 @@
         <li role="presentation">
           <a href="../quiz/catalog">Missoes</a>
         </li>
+        <% if user_signed_in? %>
         <li>
           <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
-        </li>              
+        </li>
+        <% end %>              
       </ul>
     </nav>
   </div>

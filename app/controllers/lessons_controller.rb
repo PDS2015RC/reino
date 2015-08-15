@@ -1,8 +1,19 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-
+  before_action :admin_check
   # GET /lessons
   # GET /lessons.json
+    def admin_check
+
+    if current_user.admin == false
+
+      redirect_to main_index_path
+
+    end
+
+
+  end
+  
   def index
     @lessons = Lesson.all
   end
