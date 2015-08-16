@@ -1,0 +1,29 @@
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Reino do código
+          <p class="lead">tads 2014.1</p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+      <% if user_signed_in?%>
+        <div class="well well-lg"> 
+          <div class="row">						
+            <div class="col-sm-12">
+              <p><%= current_user.name%></p>
+              <% if @character %>
+                <p>Personagem: <%= @character.name %></p>
+                <p>XP: <%= @character.xp %></p>
+                <p>Gold: <%= @character.gold %></p>
+              <% else %>
+                <p>Você ainda não tem um personagem</p>
+              <% end %>			
+            </div>
+          </div>
+        </div>
+        <% end %>  
+      </div>
+    </div> 
+  </div><!-- /cont -->
+</div>
