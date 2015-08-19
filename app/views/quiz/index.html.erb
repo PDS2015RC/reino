@@ -36,10 +36,10 @@
                     <div class="panel-heading"><%= question.statement %></div>
                     <div class="panel-body">
                       <div class="input-group">                   
-                        <input type="radio" aria-label="..."name=<%= question.statement %> value="a"><%= @alternativas[0] %><br>
-                        <input type="radio" aria-label="..."name=<%= question.statement %> value="b"><%= @alternativas[1] %><br>
-                        <input type="radio" aria-label="..."name=<%= question.statement %> value="c"><%= @alternativas[2] %><br>
-                        <input type="radio" aria-label="..."name=<%= question.statement %> value="d"><%= @alternativas[3] %><br>
+                        <input type="radio" name="<%= question.statement %>" value="a"><%= @alternativas[0] %><br>
+                        <input type="radio" name="<%= question.statement %>" value="b"><%= @alternativas[1] %><br>
+                        <input type="radio" name="<%= question.statement %>" value="c"><%= @alternativas[2] %><br>
+                        <input type="radio" name="<%= question.statement %>" value="d"><%= @alternativas[3] %><br>
                       </div>                
                     </div>
                   </div>
