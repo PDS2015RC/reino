@@ -25,36 +25,40 @@
 
           <p>Questões:</p>
 
-          <form id ="formulario" method="get">          
-            <% @questions.each do |question| %>
-              <% @alternativas = [question.a, question.b, question.c, question.d] %>
-              <% @alternativas.shuffle! %>              
-
+          <%= form_tag({ :controller => "quiz", :action => "answer"} ) do |f|%>    
                 <!-- Questões-->
+              <% @questions.each_with_index do |q, i| %>
                 <div class="panel-default">
                   <div class="panel panel-info">
-                    <div class="panel-heading"><%= question.statement %></div>
+                    <div class="panel-heading"><%= q.statement %></div>
                     <div class="panel-body">
                       <div class="input-group">                   
-                        <input type="radio" name="<%= question.statement %>" value="a"><%= @alternativas[0] %><br>
-                        <input type="radio" name="<%= question.statement %>" value="b"><%= @alternativas[1] %><br>
-                        <input type="radio" name="<%= question.statement %>" value="c"><%= @alternativas[2] %><br>
-                        <input type="radio" name="<%= question.statement %>" value="d"><%= @alternativas[3] %><br>
+                        <% @alternativas = [q.a, q.b, q.c, q.d] %>
+                        <% @alternativas.shuffle! %>
+
+                        <%= radio_button_tag "answer#{i+1}", @alternativas[0] %><%= @alternativas[0] %><br>
+                        <%= radio_button_tag "answer#{i+1}", @alternativas[1] %><%= @alternativas[1] %><br>
+                        <%= radio_button_tag "answer#{i+1}", @alternativas[2] %><%= @alternativas[2] %><br>
+                        <%= radio_button_tag "answer#{i+1}", @alternativas[3] %><%= @alternativas[3] %><br>
+                        <%= hidden_field_tag "statement#{i+1}", q.statement %>
+
+                      
                       </div>                
                     </div>
                   </div>
                 </div>
                 <!-- Questões-->
-
-          <% end %>             
-          </form>
+          <% end %>   
+                 
 
           <!--Botão pronto-->
           <div class="text-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-success btn-lg" id="responder">Terminei</button>
+              <%= submit_tag "Terminei", class: "btn btn-success btn-lg" %>
+              <!--<button type="button" class="btn btn-success btn-lg" id="responder">Terminei</button>-->
             </div>
-          </div>          
+          </div>
+          <% end %>             
           <!--Botão pronto-->
 
         </div>

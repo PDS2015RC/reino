@@ -16,6 +16,12 @@ Rails.application.routes.draw do
 
   get 'quiz/catalog'
 
+  resources :quiz do
+    collection do
+      post :answer
+    end
+  end
+
   devise_for :users, controllers: {registrations: "registrations"}
 
   resources :questions
