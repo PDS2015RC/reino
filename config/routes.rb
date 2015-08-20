@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :lessons
   resources :characters
   resources :lessons
-  resources :lessons
+  
   get 'main/index'
 
   get 'quiz/index'

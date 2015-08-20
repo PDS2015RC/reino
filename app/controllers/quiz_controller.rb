@@ -3,10 +3,19 @@ class QuizController < ApplicationController
 
 
   def index
-  	@lesson = Lesson.new(lesson_params)
-  	@video = @lesson.url
-  	@questions = Question.where(lesson: @lesson.subject).order("RANDOM()").limit(5)
+    @characters = Character.where(User_id: current_user)
+    if(@characters.size >= 1)
+  	   @lesson = Lesson.new(lesson_params)
+  	   @video = @lesson.url
+  	   @questions = Question.where(lesson: @lesson.subject).order("RANDOM()").limit(5)
+    else
+      redirect_to characters_url
+    end
   end
+
+  def catalog
+
+  end  
   
   def gerar_quiz
   	
