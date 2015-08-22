@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inventory:</strong>
+  <ul>
+	<% @inventory.line_items.each do |x| %>
+	<li><%= x.Item.name %></li>
+	<% end %>
+	</ul>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

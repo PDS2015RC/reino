@@ -1,0 +1,11 @@
+<h1>Store#index</h1>
+<% @items.each do |item| %>
+<div class="entry">
+<%= image_tag(item.img, class: 'list_image') %>
+<h3><%= item.name %></h3>
+<div class="price_line">
+<span class="price">Preço: <%= item.price %></span>
+<%= button_to 'Comprar', line_items_path(item_id: item) %>
+</div>
+</div>
+<% end %>
