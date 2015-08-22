@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   
   
 
+  resources :line_items
+  resources :inventories
+  get 'store/index'
+
+  resources :items
   resources :characters
   resources :lessons
   resources :characters

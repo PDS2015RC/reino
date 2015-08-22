@@ -3,7 +3,7 @@
 <h1>Seu Personagem</h1>
 
 <%if @characters.size >= 1%>
-
+<%= link_to "Inventario", inventories_url %>
 
   <% @characters.each do |character| %>
   <h2><%= character.name %></h2>
