@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809212350) do
+ActiveRecord::Schema.define(version: 20150822200113) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -28,12 +28,38 @@ ActiveRecord::Schema.define(version: 20150809212350) do
 
   add_index "characters", ["User_id"], name: "index_characters_on_User_id"
 
+  create_table "inventories", force: :cascade do |t|
+    t.integer  "User_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "inventories", ["User_id"], name: "index_inventories_on_User_id"
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img"
+    t.integer  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lessons", force: :cascade do |t|
     t.string   "url"
     t.string   "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "Item_id"
+    t.integer  "Inventory_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "line_items", ["Inventory_id"], name: "index_line_items_on_Inventory_id"
+  add_index "line_items", ["Item_id"], name: "index_line_items_on_Item_id"
 
   create_table "questions", force: :cascade do |t|
     t.string   "lesson"

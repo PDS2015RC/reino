@@ -4,6 +4,7 @@ class CharactersController < ApplicationController
   # GET /characters.json
   def index
     @characters = Character.where(User_id: current_user)
+    @inventories = Inventory.where(User_id: current_user)
   end
 
   # GET /characters/1
@@ -28,10 +29,12 @@ class CharactersController < ApplicationController
   # POST /characters
   # POST /characters.json
   def create
+    @inventory = Inventory.new
+    @inventory.User_id = current_user.id
     @character = Character.new(character_params)
     @character.User_id = current_user.id
     respond_to do |format|
-      if @character.save
+      if @character.save && @inventory.save
         format.html { redirect_to @character, notice: 'Character was successfully created.' }
         format.json { render :show, status: :created, location: @character }
       else
