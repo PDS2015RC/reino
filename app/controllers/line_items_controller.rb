@@ -24,19 +24,26 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
+    @character = Character.where(User_id: current_user).first
     @inventory = Inventory.where(User_id: current_user).first
     item = Item.find(params[:item_id])
-    @line_item = LineItem.new
-    @line_item.Item = item
-    @line_item.Inventory = @inventory
+    if item.price > @character.gold
+      redirect_to store_index_path, notice: 'Voce não tem ouro suficiente'
+    else  
+      @line_item = LineItem.new
+      @line_item.Item = item
+      @line_item.Inventory = @inventory
+      @character.gold -= item.price
+      @character.save
 
-    respond_to do |format|
-      if @line_item.save
-        format.html { redirect_to inventories_url, notice: 'Novo item Comprado' }
-        format.json { render :show, status: :created, location: @line_item }
-      else
-        format.html { render :new }
-        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @line_item.save
+          format.html { redirect_to inventories_url, notice: 'Novo item Comprado' }
+          format.json { render :show, status: :created, location: @line_item }
+        else
+          format.html { render :new }
+          format.json { render json: @line_item.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -58,6 +65,8 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
+    @character.gold += @line_item.Item.price
+    @character.save
     @line_item.destroy
     respond_to do |format|
       format.html { redirect_to inventories_url, notice: 'Item vendido' }

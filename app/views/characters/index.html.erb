@@ -3,10 +3,12 @@
 <h1>Seu Personagem</h1>
 
 <%if @characters.size >= 1%>
-<%= link_to "Inventario", inventories_url %>
+<h3>Inventario: </h3>
+<%= link_to image_tag("bag.png", :border => 0, :class => 'list_image'), inventories_url %>
 
   <% @characters.each do |character| %>
   <h2><%= character.name %></h2>
+  <h3>Level: <%= character.level %></h3>
   <h3>xp: <%= character.xp %></h3>
   <h3>Gold: <%= character.gold %></h3>
   

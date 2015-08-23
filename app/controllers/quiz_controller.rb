@@ -38,6 +38,7 @@ class QuizController < ApplicationController
     @question4 = Question.where(statement: @statement4).first
     @question5 = Question.where(statement: @statement5).first
     @answers = [@answer1, @answer2, @answer3, @answer4, @answer5]
+    @character = Character.where(User_id: current_user).first
 
     @questions_answers = [@question1.a, @question2.a, @question3.a, @question4.a, @question5.a] 
     @result = 0
@@ -47,6 +48,18 @@ class QuizController < ApplicationController
          @result = @result + 1
       end  
     end  
+    @xp_mult = @result * 10
+    @gold_mult = @result * 5 
+
+    @character.xp += @xp_mult
+    @character.gold += @gold_mult
+
+    if @character.xp > 200 
+      @character.xp = 0
+      @character.level += 1
+    end
+
+    @character.save
 
   end  
 

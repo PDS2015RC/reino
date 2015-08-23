@@ -33,6 +33,9 @@ class CharactersController < ApplicationController
     @inventory.User_id = current_user.id
     @character = Character.new(character_params)
     @character.User_id = current_user.id
+    @character.level = 1
+    @character.xp = 0
+    @character.gold = 0
     respond_to do |format|
       if @character.save && @inventory.save
         format.html { redirect_to @character, notice: 'Character was successfully created.' }
@@ -62,6 +65,10 @@ class CharactersController < ApplicationController
   # DELETE /characters/1.json
   def destroy
     @character.destroy
+    @inventories = Inventory.where(User_id: current_user)
+    @inventories.each do |inventory|
+      inventory.destroy
+    end  
     respond_to do |format|
       format.html { redirect_to characters_url, notice: 'Character was successfully destroyed.' }
       format.json { head :no_content }

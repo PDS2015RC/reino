@@ -14,8 +14,9 @@
               <p><%= current_user.name%></p>
               <% if @character %>
                 <p>Personagem: <%= @character.name %></p>
-                <p>XP: <%= @character.xp %></p>
-                <p>Gold: <%= @character.gold %></p>
+                <p>Level: <%= @character.level %>
+                    XP: <%= @character.xp %>
+                    Gold: <%= @character.gold %></p>
               <% else %>
                 <p>Você ainda não tem um personagem</p>
               <% end %>			

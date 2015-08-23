@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   resources :items
   resources :characters
   resources :lessons
-  resources :characters
-  resources :lessons
+  resources :store
   
   get 'main/index'
 
