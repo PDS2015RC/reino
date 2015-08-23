@@ -1,36 +1,39 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div role="main" class="col-md-4">
 
-<h1>Seu Personagem</h1>
+    <h1>Seu Personagem</h1>
 
-<%if @characters.size >= 1%>
-<h3>Inventario: </h3>
-<%= link_to image_tag("bag.png", :border => 0, :class => 'list_image'), inventories_url %>
+    <%if @characters.size >= 1%>
+    <% @characters.each do |character| %>
+    <h2><%= character.name %></h2>
+    <h3>Level: <%= character.level %></h3>
+    <h3>xp: <%= character.xp %></h3>
+    <h3>Gold: <%= character.gold %></h3>
+  </div>
 
-  <% @characters.each do |character| %>
-  <h2><%= character.name %></h2>
-  <h3>Level: <%= character.level %></h3>
-  <h3>xp: <%= character.xp %></h3>
-  <h3>Gold: <%= character.gold %></h3>
-  
-
-<br>
-
-<div id="canvasDiv"></div>
-<script type="text/javascript">
-  prepareCanvas(document.getElementById("canvasDiv"), 490, 220);
-  change('hair', "<%= character.hair %>");
-  change('torso', "<%= character.shirt %>");
-  change('legs', "<%= character.pants %>");
-  if("<%= character.skin %>" != "default"){
-  change('head', "head_" + "<%= character.skin %>");
-  change('leftArm', "leftArm_" + "<%= character.skin %>");
-  change('rightArm', "rightArm_" + "<%= character.skin %>");
-  }
-</script>
-<%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %>
- <% end %>
-<% else %>
-<h2>Voce ainda não tem um personagem</h2>
-<%= link_to 'New Character', new_character_path %>
-<% end %>
-
+  <aside role="complementary" class="col-md-8">
+  <h3>Inventario: </h3>
+  <%= link_to image_tag("bag.png", :border => 0, :class => 'list_image'), inventories_url %>
+  <div id="canvasDiv"></div>
+    <script type="text/javascript">
+    prepareCanvas(document.getElementById("canvasDiv"), 490, 220);
+    change('hair', "<%= character.hair %>");
+    change('torso', "<%= character.shirt %>");
+    change('legs', "<%= character.pants %>");
+    if("<%= character.skin %>" != "default"){
+    change('head', "head_" + "<%= character.skin %>");
+    change('leftArm', "leftArm_" + "<%= character.skin %>");
+    change('rightArm', "rightArm_" + "<%= character.skin %>");
+    }
+    </script>
+    <%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    <% else %>
+    <h2>Voce ainda não tem um personagem</h2>
+    <%= link_to 'New Character', new_character_path %>
+    <% end %>
+    </aside>
+</div>
+</div>
