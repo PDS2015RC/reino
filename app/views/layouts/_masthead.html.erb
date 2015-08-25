@@ -9,18 +9,27 @@
       <div class="col-md-5">
       <% if user_signed_in?%>
         <div class="well well-lg"> 
-          <div class="row">						
+          <div class="row">
+
             <div class="col-sm-12">
-              <p><%= current_user.name%></p>
-              <% if @character %>
+             <% if @character %>
+                <p class="lead"><%= current_user.name%></p>              
                 <p>Personagem: <%= @character.name %></p>
-                <p>Level: <%= @character.level %>
-                    XP: <%= @character.xp %>
-                    Gold: <%= @character.gold %></p>
-              <% else %>
-                <p>Você ainda não tem um personagem</p>
+                <p>Level: <%= @character.level %></p>
+                <p>Gold: <%= @character.gold %></p>
+
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <%= @character.xp %>%;">
+                    <%= @character.xp %>%
+                  </div>
+                </div>
+              <% else %>                
+                <div class="alert text-center" role="alert">
+                  <h3>Você ainda não tem um personagem</h3>
+                </div>
               <% end %>			
             </div>
+
           </div>
         </div>
         <% end %>  
