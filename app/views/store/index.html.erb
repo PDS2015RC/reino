@@ -1,12 +1,31 @@
 <p id="notice"><%= notice %></p>
-<h1>Loja</h1>
-<% @items.each do |item| %>
-<div class="entry">
-<%= image_tag(item.img, class: 'list_image') %>
-<h3><%= item.name %></h3>
-<div class="price_line">
-<span class="price">Preço: <%= item.price %></span>
-<%= button_to 'Comprar', line_items_path(item_id: item) %>
+<div class="container">
+<br>
+<div class="row">
+					<% @items.each do |item| %>
+                    <div class="col-sm-4 col-lg-4 col-md-4 ">
+                        <div class="thumbnail thumbnail2 marginItem">
+                        	<%= image_tag(item.img) %>
+                            <div class="caption">
+                                <h4 class="pull-right">Preço: <%= item.price %></h4>
+                                <h4><%= item.name %>
+                                </h4>
+                                <p></p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                                <%= button_to 'Comprar', line_items_path(item_id: item) %>
+                            </div>
+                        </div>
+                    </div>
+
+                
+		<% end %>
+                </div>
 </div>
-</div>
-<% end %>

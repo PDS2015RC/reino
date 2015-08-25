@@ -161,8 +161,19 @@ a,a:hover {
 }
 
 .list_image {
-   width:  60px;
    height: 70px;
+}
+
+.img-responsive,
+.thumbnail2 > img,
+.thumbnail2 a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  height: 70px;
+}
+
+.marginItem{
+  padding: 25px;
 }
     
 .btn-twitter {background-color:#4099FF;color:#fff;}
