@@ -170,7 +170,6 @@ Question.create(lesson: 'condicional_if',
 
 Lesson.create(url: 'DWkyl-1rkW4', subject: 'loops')
 Lesson.create(url: '45HA6h_FTBg', subject: 'condicional_if')
-Lesson.create(url: 'DWkyl-1rkW4', subject: 'loops')
 Lesson.create(url: '88DuNsoq8Xs', subject: 'operadores_aritimétricos')
 Lesson.create(url: '5o3j4Y1WFc8', subject: 'operadores_lógicos')
 Lesson.create(url: 'GmwD4I1gobQ', subject: 'métodos_de_strings')
