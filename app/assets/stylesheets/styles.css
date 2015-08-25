@@ -175,6 +175,10 @@ a,a:hover {
 .marginItem{
   padding: 25px;
 }
+
+.col-char{
+  height: 370px;
+}
     
 .btn-twitter {background-color:#4099FF;color:#fff;}
 .btn-facebook {background-color:#3B5998;color:#fff;}
