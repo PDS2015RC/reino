@@ -7,6 +7,44 @@ class CharactersController < ApplicationController
     @inventories = Inventory.where(User_id: current_user)
   end
 
+  def addItem
+    item_name = params[:item_name]
+    item_img = params[:item_img]
+    item_part = params[:part]
+    @character = Character.where(User_id: current_user).first
+    if item_part == "helmet"
+      @character.helmet = item_img
+    elsif item_part == "shield"
+      @character.shield = item_img
+    elsif item_part == "weapon"
+      @character.weapon = item_img
+    elsif item_part == "armor"
+      @character.armor = item_img            
+    end  
+    
+    if @character.save
+    redirect_to :action => :index
+    end
+  end
+
+  def removeItem
+    item_part = params[:part]
+    @character = Character.where(User_id: current_user).first
+    if item_part == "helmet"
+      @character.helmet = "none"
+    elsif item_part == "shield"
+      @character.shield = "none"
+    elsif item_part == "weapon"
+      @character.weapon = "none"
+    elsif item_part == "armor"
+      @character.armor = "none"            
+    end  
+
+
+    if @character.save
+    redirect_to :action => :index
+    end
+  end  
   # GET /characters/1
   # GET /characters/1.json
   def show
@@ -35,7 +73,11 @@ class CharactersController < ApplicationController
     @character.User_id = current_user.id
     @character.level = 1
     @character.xp = 0
-    @character.gold = 0
+    @character.gold = 200
+    @character.helmet = "none"
+    @character.armor = "none"
+    @character.weapon = "none"
+    @character.shield = "none"
     respond_to do |format|
       if @character.save && @inventory.save
         format.html { redirect_to @character, notice: 'Character was successfully created.' }

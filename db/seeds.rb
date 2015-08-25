@@ -1,3 +1,8 @@
+Item.create(name: 'Adaga Dourada', price: 50, part: "weapon", img: "adaga")
+Item.create(name: 'Escudo Dourado', price: 50, part: "shield", img: "escudo")
+Item.create(name: 'Elmo Dourado', price: 50, part: "helmet", img: "upg_helmet")
+Item.create(name: 'Armadura Dourada', price: 50, part: "armor", img: "armadura")
+
 Question.create(lesson: 'loops', statement: 'qual é a cor do carro azul?', a: 'azul', b: 'verde', c: 'preto', d: 'branco')
 Question.create(lesson: 'loops', statement: 'quanto é 2+2?', a: '4', b: '10', c: '2', d: '0')
 Question.create(lesson: 'loops', statement: 'terceiro, quarto, quinto...', a: 'sexto', b: 'primeiro', c: 'sétimo', d: 'oitavo')

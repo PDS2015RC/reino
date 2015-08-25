@@ -18,7 +18,7 @@
   <%= link_to image_tag("bag.png", :border => 0, :class => 'list_image'), inventories_url %>
   <div id="canvasDiv"></div>
     <script type="text/javascript">
-    prepareCanvas(document.getElementById("canvasDiv"), 490, 220);
+    prepareCanvas(document.getElementById("canvasDiv"), 490, 220, "<%= @character.helmet%>", "<%= @character.armor%>", "<%= @character.shield%>", "<%= @character.weapon%>");
     change('hair', "<%= character.hair %>");
     change('torso', "<%= character.shirt %>");
     change('legs', "<%= character.pants %>");

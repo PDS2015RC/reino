@@ -35,13 +35,21 @@ var blinkTimer = setInterval(updateBlink, blinkUpdateTime);
 var fpsInterval = setInterval(updateFPS, 1000);
 var numFramesDrawn = 0;
 var curFPS = 0;
+var has_helmet = false;
+var helmet_name;
+var has_armor = false;
+var armor_name;
+var has_shield = false;
+var shield_name;
+var has_weapon = false;
+var weapon_name;
 
 function updateFPS() {
 	
 	curFPS = numFramesDrawn;
 	numFramesDrawn = 0;
 }		
-function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
+function prepareCanvas(canvasDiv, canvasWidth, canvasHeight, helmet, armor, shield, weapon)
 {
 	// Create the canvas (Neccessary for IE because it doesn't know what a canvas element is)
 	canvas = document.createElement('canvas');
@@ -49,7 +57,27 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
 	canvas.setAttribute('height', canvasHeight);
 	canvas.setAttribute('id', 'canvas');
 	canvasDiv.appendChild(canvas);
-	
+	if (helmet != "none") {
+		has_helmet = true;
+		helmet_name = helmet;
+	};
+
+	if (armor != "none"){
+		has_armor = true;
+		armor_name = armor;
+	}
+
+	if (shield != "none"){
+		has_shield = true;
+		shield_name = shield;
+	}
+
+	if (weapon != "none"){
+		has_weapon = true;
+		weapon_name = weapon;
+	}
+
+
 	if(typeof G_vmlCanvasManager != 'undefined') {
 		canvas = G_vmlCanvasManager.initElement(canvas);
 	}
@@ -62,7 +90,21 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
 	loadImage("torso");
 	loadImage("rightArm");
 	loadImage("head");
-	loadImage("hair");
+	if(has_helmet == true) {
+		loadImage(helmet);
+	} else {
+		loadImage("hair");
+	}
+	if(has_armor == true){
+		loadImage(armor);
+	}
+	if(has_shield == true){
+		loadImage(shield);
+	}
+	if(has_weapon == true){
+		loadImage(weapon);
+	}
+
 }
 
 function loadImage(name) {
@@ -98,12 +140,27 @@ function redraw() {
   drawEllipse(x + 40, y + 29, 160 - breathAmt, 6); // Shadow
 
   context.drawImage(images["leftArm"], x + 40, y - 42 - breathAmt);
+  if (has_weapon == true) {
+  	context.drawImage(images[weapon_name], x + 77, y - 55 - breathAmt);
+  }
   context.drawImage(images["legs"], x, y);
   context.drawImage(images["torso"], x, y - 50);
+  if (has_armor == true) {
+  	context.drawImage(images[armor_name], x + 7, y - 45);
+  }
   context.drawImage(images["head"], x - 10, y - 125 - breathAmt);
-  context.drawImage(images["hair"], x - 37, y - 138 - breathAmt);
+  if (has_helmet == false) {
+  	context.drawImage(images["hair"], x - 37, y - 138 - breathAmt);
+  };
   context.drawImage(images["rightArm"], x - 15, y - 42 - breathAmt);
-	
+  if (has_shield == true) {
+  	context.drawImage(images[shield_name], x - 20, y - 42 - breathAmt);
+  }
+  
+  if (has_helmet == true) {
+  	context.drawImage(images[helmet_name], x - 17, y - 140 - breathAmt);
+	}
+  
   drawEllipse(x + 47, y - 68 - breathAmt, 8, curEyeHeight); // Left Eye
   drawEllipse(x + 58, y - 68 - breathAmt, 8, curEyeHeight); // Right Eye
   

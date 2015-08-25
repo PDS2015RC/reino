@@ -6,6 +6,7 @@ class InventoriesController < ApplicationController
   def index
     @inventories = Inventory.all
     @inventory = Inventory.where(User_id: current_user).first
+    @character = Character.where(User_id: current_user).first
   end
 
   # GET /inventories/1

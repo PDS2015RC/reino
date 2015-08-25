@@ -18,7 +18,12 @@
         <td><%= x.Item.name %></td>
         <td><%= image_tag(x.Item.img, class: 'list_image') %></td>
         <td><%= x.Item.price %></td>
+        <% if (x.Item.img == @character.helmet || x.Item.img == @character.armor || x.Item.img == @character.weapon || x.Item.img == @character.shield) %>
+        <td><%= button_to 'Desequipar', {:controller => "characters", :action => "removeItem", :part => x.Item.part} , :method=>:post  %></td>
+        <% else %>
+        <td><%= button_to 'Equipar', {:controller => "characters", :action => "addItem", :name => x.Item.name,:item_img => x.Item.img, :part => x.Item.part} , :method=>:post  %></td>
         <td><%= link_to 'Vender', x, method: :delete, data: { confirm: 'Tem certeza que deseja vender?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

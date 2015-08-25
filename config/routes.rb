@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   get 'store/index'
 
   resources :items
-  resources :characters
+  resources :characters do
+    collection do
+      post :addItem
+      post :removeItem
+    end
+  end
+
+
   resources :lessons
   resources :store
   
