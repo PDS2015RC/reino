@@ -1,40 +1,50 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <fieldset>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+      <h2>Sign up</h2>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name%>
-    </div>
+      <div class="form-group">
+        <%= f.label :nome %><br />
+        <%= f.text_field :name, :class => 'form-control input-lg', :placeholder => 'nome' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, :class => 'form-control input-lg', :placeholder => 'email', autofocus: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <%= f.password_field :password, :class => 'form-control input-lg', :placeholder => 'senha', autocomplete: "off" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <br />    
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+      <div class="form-group">
+        <label>Confirmar senha</label>
+        <%= f.password_field :password_confirmation, :class => 'form-control input-lg', :placeholder => 'confirmar senha', autocomplete: "off" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :admin%>
-    <%= f.check_box :admin %>
-  </div>
+      <div class="form-group">
+        <%= f.check_box :admin %>
+        <label>Administrador ?</label>
+      </div>
 
+      <div class="actions">
+        <%= f.submit "Sign up", :class => 'form-control input-lg btn-primary', :placeholder => 'email'%>
+      </div>
+      <% end %>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <br>
+      <%= render "devise/shared/links" %>
 
-<%= render "devise/shared/links" %>
+    </fieldset>
+  </div> 
+   <div class="col-md-4"></div>
+</div>
