@@ -54,7 +54,7 @@ class QuizController < ApplicationController
     @character.xp += @xp_mult
     @character.gold += @gold_mult
 
-    if @character.xp > 200 
+    if @character.xp >= 200 
       @character.xp = 0
       @character.level += 1
     end

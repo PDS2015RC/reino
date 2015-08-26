@@ -19,8 +19,8 @@
                 <p>Gold: <%= @character.gold %></p>
 
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <%= @character.xp %>%;">
-                    <%= @character.xp %>%
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <%= ((100*@character.xp)/200) %>%;">
+                    XP: <%= ((100*@character.xp)/200) %>%
                   </div>
                 </div>
               <% else %>                
