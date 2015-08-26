@@ -5,7 +5,7 @@
 <div class="row">
   <% @inventory.line_items.each do |x| %>
                     <div class="col-sm-4 col-lg-4 col-md-4 ">
-                        <div class="thumbnail thumbnail2 marginItem">
+                        <div class="thumbnail thumbnail2 marginItem2">
                           <%= image_tag(x.Item.img) %>
                             <div class="caption">
                                 <h4 class="pull-right">Preço: <%= x.Item.price %></h4>
@@ -21,16 +21,18 @@
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
-                                  <div class="btn-group">
+                                  
+                            </div>
+                            <div class="btn-group col-sm-12">
                                   <% if (x.Item.img == @character.helmet || x.Item.img == @character.armor || x.Item.img == @character.weapon || x.Item.img == @character.shield) %>
                                   <%= button_to 'Desequipar', {:controller => "characters", :action => "removeItem", :part => x.Item.part} , :method=>:post, class: "btn btn-warning" %>
                                   <% else %>
-                                  <%= button_to 'Equipar', {:controller => "characters", :action => "addItem", :name => x.Item.name,:item_img => x.Item.img, :part => x.Item.part} , :method=>:post,  class: "btn btn-primary" %>
-                                  <%= button_to 'Vender', x, method: :delete, class: "btn btn-success", data: { confirm: 'Tem certeza que deseja vender?' } %>
+                                  <%= button_to 'Equipar', {:controller => "characters", :action => "addItem", :name => x.Item.name,:item_img => x.Item.img, :part => x.Item.part} , :method=>:post,  class: "btn btn-primary pull-left" %>
+                                  <%= button_to 'Vender', x, method: :delete, class: "btn btn-success pull-right", data: { confirm: 'Tem certeza que deseja vender?' } %>
                                   <% end %>
-                                  </div>
                             </div>
                         </div>
+
                     </div>
   <% end %>
                 </div>

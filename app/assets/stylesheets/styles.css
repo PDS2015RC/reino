@@ -176,6 +176,11 @@ a,a:hover {
   padding: 25px;
 }
 
+.marginItem2{
+  padding: 25px;
+  height: 250px;
+}
+
 .col-char{
   height: 370px;
 }
