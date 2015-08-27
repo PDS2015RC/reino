@@ -12,7 +12,7 @@
           <div class="row">
 
             <div class="col-sm-12">
-             <% if @character %>
+             <% if @character && @character.xp != nil %>
                 <p class="lead"><%= current_user.name%></p>              
                 <p>Personagem: <%= @character.name %></p>
                 <p>Level: <%= @character.level %></p>
