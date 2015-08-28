@@ -31,7 +31,8 @@
     change('rightArm', "rightArm_" + "<%= character.skin %>");
     }
     </script>
-    <%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Deletar', character, method: :delete, data: { confirm: 'Cuidado, tem certeza que quer deletar seu personagem?' }, class: "btn btn-danger" %>
+    <br><br>
     <% end %>
     <% else %>
     <h2>Voce ainda não tem um personagem</h2>

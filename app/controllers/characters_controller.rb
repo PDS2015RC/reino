@@ -80,7 +80,7 @@ class CharactersController < ApplicationController
     @character.shield = "none"
     respond_to do |format|
       if @character.save && @inventory.save
-        format.html { redirect_to @character, notice: 'Character was successfully created.' }
+        format.html { redirect_to characters_url, notice: 'Character was successfully created.' }
         format.json { render :show, status: :created, location: @character }
       else
         format.html { render :new }
