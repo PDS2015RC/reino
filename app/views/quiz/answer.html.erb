@@ -2,8 +2,9 @@
 <br />
 <br />
 <div class="col-xs-4"></div>
+<% if @win == true %>
 <div class="col-xs-4 alert alert-success text-center" role="alert">
-	<h2>Acertou <%= @result %> Questões</h2>
+	<h2>Parabéns, Acertou <%= @result %> Questões</h2>
 	<h2>Ganhou <%= @xp_mult %> XP e <%= @gold_mult %> de ouro</h2>
 	<br>
 	<div class="btn-group">
@@ -11,4 +12,16 @@
 	  
 	</div>
 </div>
+<% else %>
+<div class="col-xs-4 alert alert-danger text-center" role="alert">
+	<h2>Acertou <%= @result %> Questões, menos que a ultima vez</h2>
+	<h2>Não houve ganhos</h2>
+	<br>
+	<div class="btn-group">
+	<%= button_to 'Voltar', characters_url, :method => :get, class: "btn btn-danger dropdown-toggle" %>
+	  
+	</div>
+</div>
+
+<% end %>
 <div class="col-xs-4"></div>

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   
   
 
+  resources :done_lessons
+  get 'admin/index'
+
   resources :line_items
   resources :inventories
   get 'store/index'

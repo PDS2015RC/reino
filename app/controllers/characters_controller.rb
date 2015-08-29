@@ -106,6 +106,10 @@ class CharactersController < ApplicationController
   # DELETE /characters/1
   # DELETE /characters/1.json
   def destroy
+    @done_lessons = DoneLesson.where(character_id: @character.id)
+    @done_lessons.each do |done_lesson|
+      done_lesson.destroy
+    end  
     @character.destroy
     @inventories = Inventory.where(User_id: current_user)
     @inventories.each do |inventory|

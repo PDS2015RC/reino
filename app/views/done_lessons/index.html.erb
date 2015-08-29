@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Done Lessons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesson</th>
+      <th>Character</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @done_lessons.each do |done_lesson| %>
+      <tr>
+        <td><%= done_lesson.Lesson.subject %></td>
+        <td><%= done_lesson.Character.name %></td>
+        <td><%= done_lesson.score %></td>
+        <td><%= link_to 'Show', done_lesson %></td>
+        <td><%= link_to 'Edit', edit_done_lesson_path(done_lesson) %></td>
+        <td><%= link_to 'Destroy', done_lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Done lesson', new_done_lesson_path %>

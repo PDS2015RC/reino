@@ -14,7 +14,8 @@ class QuizController < ApplicationController
   end
 
   def catalog
-
+    @character = Character.where(User_id: current_user).first
+    @done_lessons = DoneLesson.where(character_id: @character.id)
   end  
   
   def gerar_quiz
@@ -38,8 +39,9 @@ class QuizController < ApplicationController
     @question4 = Question.where(statement: @statement4).first
     @question5 = Question.where(statement: @statement5).first
     @answers = [@answer1, @answer2, @answer3, @answer4, @answer5]
+    @lesson = Lesson.where(subject: @question1.lesson).first
     @character = Character.where(User_id: current_user).first
-
+    @win = false
     @questions_answers = [@question1.a, @question2.a, @question3.a, @question4.a, @question5.a] 
     @result = 0
 
@@ -48,18 +50,39 @@ class QuizController < ApplicationController
          @result = @result + 1
       end  
     end  
-    @xp_mult = @result * 10
-    @gold_mult = @result * 5 
-
-    @character.xp += @xp_mult
-    @character.gold += @gold_mult
-
+    
+    @done_lesson = DoneLesson.where(lesson_id: @lesson.id).first
+    if @done_lesson == nil
+      @done_lesson = DoneLesson.new
+      @done_lesson.Lesson_id = @lesson.id
+      @done_lesson.Character_id = @character.id
+      @done_lesson.score = @result
+      @done_lesson.save
+      @xp_mult = @result * 10
+      @gold_mult = @result * 5 
+      @character.xp += @xp_mult
+      @character.gold += @gold_mult
+      @win = true
     if @character.xp >= 200 
       @character.xp = 0
       @character.level += 1
     end
-
-    @character.save
+      @character.save
+    elsif @done_lesson.score < @result
+      @done_lesson.score = @result  
+      @done_lesson.save
+      @xp_mult = @result * 10
+    @gold_mult = @result * 5 
+    @character.xp += @xp_mult
+    @character.gold += @gold_mult
+    @win = true
+    if @character.xp >= 200 
+      @character.xp = 0
+      @character.level += 1
+    end
+      @character.save
+    end
+    
 
   end  
 

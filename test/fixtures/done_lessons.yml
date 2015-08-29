@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Lesson_id: 
+  Character_id: 
+
+two:
+  Lesson_id: 
+  Character_id: 
