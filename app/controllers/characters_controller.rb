@@ -78,6 +78,8 @@ class CharactersController < ApplicationController
     @character.armor = "none"
     @character.weapon = "none"
     @character.shield = "none"
+    @character.wrong = 0
+    @character.correct = 0
     respond_to do |format|
       if @character.save && @inventory.save
         format.html { redirect_to characters_url, notice: 'Character was successfully created.' }

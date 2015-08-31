@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829134754) do
+ActiveRecord::Schema.define(version: 20150831003119) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20150829134754) do
     t.string   "armor"
     t.string   "shield"
     t.string   "weapon"
+    t.integer  "correct"
+    t.integer  "wrong"
   end
 
   add_index "characters", ["User_id"], name: "index_characters_on_User_id"

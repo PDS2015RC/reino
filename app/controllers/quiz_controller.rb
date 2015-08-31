@@ -60,6 +60,8 @@ class QuizController < ApplicationController
       @done_lesson.save
       @xp_mult = @result * 10
       @gold_mult = @result * 5 
+      @character.correct += @result
+      @character.wrong += 5 - @result
       @character.xp += @xp_mult
       @character.gold += @gold_mult
       @win = true
@@ -73,6 +75,8 @@ class QuizController < ApplicationController
       @done_lesson.save
       @xp_mult = @result * 10
     @gold_mult = @result * 5 
+    @character.correct += @result
+    @character.wrong += 5 - @result
     @character.xp += @xp_mult
     @character.gold += @gold_mult
     @win = true

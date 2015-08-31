@@ -1,2 +1,33 @@
+<div class="container">
 <h1>Admin#index</h1>
-<p>Find me in app/views/admin/index.html.erb</p>
+<div class="row">
+<h2>Usuarios</h2>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Acertos</th>
+      <th>Erros</th>
+      <th>lvl</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <% if user.id == character.User_id %>
+        	<td><%= character.correct%></td>
+        	<td><%= character.wrong%></td>
+        	<td><%= character.level%></td>
+        <% end %>
+      </tr>
+    <% end %> 
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
