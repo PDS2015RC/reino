@@ -1,7 +1,13 @@
 <div class="container">
-<h1>Admin#index</h1>
+<h1>Area de Administrador</h1>
 <div class="row">
-<h2>Usuarios</h2>
+<br>
+<%= link_to 'Aulas', lessons_url , class: 'btn btn-primary'%>
+<%= link_to 'Questões', questions_url, class: 'btn btn-primary'%>
+<br>
+<br>
+<div class="panel panel-default">
+<div class="panel-heading">Usuarios</div>
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -15,11 +21,11 @@
 
   <tbody>
     <% @users.each do |user| %>
-    <% @characters.each do |character| %>
+    <% @chars.each do |character| %>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
         <% if user.id == character.User_id %>
+        	<td><%= user.name %></td>
+       		<td><%= user.email %></td>
         	<td><%= character.correct%></td>
         	<td><%= character.wrong%></td>
         	<td><%= character.level%></td>
@@ -31,3 +37,6 @@
 </table>
 </div>
 </div>
+</div>
+
+

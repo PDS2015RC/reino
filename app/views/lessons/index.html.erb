@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Lessons</h1>
-
-<table>
+<div class="container">
+<div class="panel panel-default">
+<div class="panel-heading">Aulas</div>
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Url</th>
@@ -24,6 +24,11 @@
   </tbody>
 </table>
 
+</div>
+<%= link_to 'Nova aula', new_lesson_path, class: 'btn btn-primary'%>
+</div>
 <br>
 
-<%= link_to 'New Lesson', new_lesson_path %>
+
+<br><br>
+</div>
