@@ -50,8 +50,9 @@ class QuizController < ApplicationController
          @result = @result + 1
       end  
     end  
-    
-    @done_lesson = DoneLesson.where(lesson_id: @lesson.id).first
+
+    @done_lessons = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first 
+
     if @done_lesson == nil
       @done_lesson = DoneLesson.new
       @done_lesson.Lesson_id = @lesson.id
